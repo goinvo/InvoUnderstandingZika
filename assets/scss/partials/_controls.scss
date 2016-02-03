@@ -1,0 +1,249 @@
+button,.button {
+	@include border-radius($radius-base);
+	background: $button-base-bg; 
+	color: $font-color-base;
+	height: $input-height;
+	border: $input-border;
+	padding: 0 0.9rem 0 0.9rem;
+	&:hover:enabled {
+		@include button-hover;
+		cursor: pointer;
+	}
+	&:focus:enabled {
+		@include input-focus;
+		cursor: pointer;
+	}
+	&:disabled {
+		opacity: .5;
+	}
+	//styles for buttons with icons
+	span {
+		padding-right: 0.7rem;
+		color: $font-color-base;
+	}
+
+	//active button state
+	&.active {
+		background:$button-active-bg;
+		color: $font-color-button-active;
+		font-weight: bold;
+		border: $button-border-active;
+		&:hover:enabled {
+			background:$button-active-hover;
+			border:$button-hover-border-active;
+		}
+		&:focus:enabled {
+			@include input-focus;
+		}
+		span {
+			color: #fff;
+		}
+	}
+}
+
+input, input[type="text"] {
+	@include border-radius($radius-base);
+	border: $input-border;
+	height: $input-height;
+	padding: 0 0.9rem 0 0.9rem;
+	&:hover:enabled {
+		border:$button-hover-border;
+	}
+	&:focus:enabled {
+		@include input-focus;
+	}
+	&:disabled {
+		opacity: .5;
+		background: #f0f0f0;
+		border: solid 0.1rem #eaeaea;
+	}
+}
+
+textarea {
+	font-family: $font-family;
+	//resize:none;
+	overflow:auto;
+	@include border-radius($radius-base);
+	border: $input-border;
+	padding: 0.9rem 0.9rem 0.9rem 0.9rem;
+	&:hover:enabled {
+		border:$button-hover-border;
+	}
+	&:focus:enabled {
+		@include input-focus;
+	}
+	&:disabled {
+		opacity: .5;
+		background: #f0f0f0;
+		border: solid 0.1rem #eaeaea;
+	}
+}
+
+.radio {
+	input[type="radio"] {
+		display: none;
+		&:checked + label:before {
+			content: "\2022";
+			font-size: 2.4rem;
+			color: $font-color-secondary;
+			text-align: center;
+			line-height: 1.2rem;
+		}
+	}
+	label:before {
+		@include border-radius(0.8rem);
+		width: 1.2rem;
+		height: 1.2rem;
+		&:focus, &:hover {
+			@include input-focus;
+		}
+	}
+}
+.checkbox {
+	input[type="checkbox"] {
+		display: none;
+		&:checked + label:before {
+			background: url("../images/svgs/imsHealth_icons_checked.svg") no-repeat;
+			background-position: center center;
+		}
+	}
+	label:before {
+		@include border-radius(0.2rem);
+		width: 1.0rem;
+		height: 1.0rem;
+	}
+}
+.radio, .checkbox{
+	label {
+		display: inline-block;
+		cursor: pointer;
+		position: relative;
+		padding-left: 2.0rem;
+		font-size: $font-size-base;
+		color: $font-color-base;
+		top: -0.4rem;
+		line-height: $font-size-base;
+		&:before {
+			content: ""; 
+			display: inline-block;
+			text-align: top;
+			margin-right: 0.6rem;
+			position: absolute;
+			left: 0;
+			background-color: #fff;
+			border: $input-border;
+		}
+		&:focus, &:hover {
+			&:before {@include input-focus;}
+		}
+	}
+	&.disabled {
+		opacity: .5;
+		label {
+			&:before{
+				border: solid 0.1rem #e5e5e5;
+				background:#f0f0f0;
+				box-shadow: none;
+			}
+			&:focus, &:hover{
+				cursor: default;
+			}	
+		}
+	}
+}
+
+
+.select{
+	select{
+		@include border-radius($radius-base);
+		background: $button-base-bg;
+		border: $input-border;
+		height: $input-height;
+		padding: 0 1.8rem 0 0.6rem; 
+		-webkit-appearance:none;
+		-moz-appearance:none;
+		appearance:none;
+		cursor:pointer;
+		&::-ms-expand {
+			display: none;
+		}
+		&:hover:enabled {
+			@include button-hover;
+			label:after {
+				background: url("../images/svgs/imsHealth_icons_input-drop-arrow-dark.svg") no-repeat;
+			}
+		}
+		&:focus:enabled {
+			@include input-focus;
+		}
+		&:disabled {
+			opacity: .5;
+		}
+	}
+
+	label {position:relative}
+	label:after {
+		content: '';
+		background: url("../images/svgs/imsHealth_icons_input-drop-arrow.svg") no-repeat;
+		right: -1.2rem; 
+		top: 0.4rem;
+		width: 3.2rem; 
+		height: 3.2rem;
+		position:absolute;
+		pointer-events:none;
+		&:hover, :focus {
+			
+		}
+	}
+}
+
+.inputGroup {
+	p { margin-bottom: -0.4rem; }
+	p:last-child {margin-bottom: -1.0rem; }
+	.label {
+		color: $font-color-secondary;
+		margin-bottom: 1.0rem; 
+	}
+	vertical-align: top;
+	&.required {
+		.asterisk {color: #de5741;}
+	}
+	&.error {
+		.label  {color: $error-color;}
+		input {
+			border: $error-border;
+			background: $error-background;
+			color: $error-color;
+			&:focus {
+				@include input-focus;
+				color: $font-color-base;
+				background: #fff;
+			}
+		}
+		select {
+			border: $error-border;
+			color: $error-color;
+			&:focus {
+				@include input-focus;
+				color: $font-color-base;
+			}
+		}
+		
+		.radio, .checkbox{
+			label {
+				color: $error-color;
+				&:before {
+					border: $error-border;
+					background: $error-background;
+				}
+				&:focus, &:hover {
+					color: $font-color-base;
+					&:before {
+						@include input-focus;
+						background-color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

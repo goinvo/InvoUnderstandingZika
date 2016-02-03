@@ -1,0 +1,71 @@
+/* variables */
+$input-height: 2.7rem;
+$radius-base: 0.2rem;
+$range-width: 15rem;
+
+/* mix-ins */
+@mixin border-radius($radius) { 
+	-webkit-border-radius: $radius;
+	-moz-border-radius:	$radius;
+	border-radius: $radius;
+}
+@mixin input-focus {
+	border: $focus-border;
+	box-shadow: $focus-shadow;
+}
+@mixin button-hover {
+	background:$button-hover;
+	border:$button-hover-border;
+}
+@mixin no-select {
+	  -webkit-user-select: none;  /* Chrome all / Safari all */
+	  -moz-user-select: none;     /* Firefox all */
+	  -ms-user-select: none;      /* IE 10+ */
+	  user-select: none;	
+}
+
+@mixin range-track {
+	height: 0.5rem;
+	border-radius:0.4rem;
+	width: $range-width;
+	background: #fff;
+	box-shadow: $ui-track-shadow;
+	border: $input-border;
+	cursor: pointer;
+	animate: 0.2s;
+}
+
+@mixin range-thumb {
+	background: $button-active-bg;
+	border: none;
+	height: 1.5rem;
+	width: 1.5rem;
+	border-radius: 0.75rem;
+	cursor: pointer;
+	&:after {
+		content:'1-10';
+		color: $font-color-base;
+		size: $font-size-small;
+	}
+}
+
+@mixin menu-small {
+	.menu {
+		z-index: 5;
+		ul {
+			height: 100%;
+			width: 15.0rem;
+			li {
+				display: block;
+				padding-left: 2.0rem;
+				background: $main-nav-color;
+				&:nth-child(2) {margin-left: 0; } /*fix to reset hack*/
+			}
+		}
+		.right-container {
+			position: relative;
+			display: block;
+			margin-top: 1.7rem;
+		}
+	}
+}
