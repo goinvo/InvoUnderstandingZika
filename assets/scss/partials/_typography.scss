@@ -4,14 +4,13 @@ html {
 
 $font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 $font-family-serif: 'Jenson Pro', Georgia;
-$font-size-small: 1.2rem; /* =10px */
-$font-size-base: 1.4rem; /* =12px */
-$font-size-large: 1.6rem; /* =14px */
+$font-size-small: 1.4rem; /* =12px */
+$font-size-base: 1.8rem; /* =20pt */
 $font-size-small-title: 1.8rem; /* =14px */
-$font-size-title: 2.4rem; /* =18px */
+$font-size-title: 3.8rem; /* =38px */
 $font-size-large-title: 3.0rem; /* = 24px*/
-$line-height-base: 1.6rem; /*=16px*/
-$line-height-title: 2.2rem; /*22px*/
+$line-height-base: $font-size-base + 1rem; /*=16px*/
+$line-height-title: $font-size-title; /*22px*/
 $line-height-title-large: 2.8rem; /* 28px */
 
 body {
@@ -45,6 +44,10 @@ h3 {
 	font-size: $font-size-small-title;
 	line-height: $line-height-title;
 	font-weight: 300;
+}
+
+strong {
+	font-weight: 700;
 }
 
 .secondary {

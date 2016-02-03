@@ -7,7 +7,7 @@ module.exports = {
 	        {
 	            expand: true,
 	            cwd: 'assets/scss',
-	            src: ['guide.scss','goinvo-app.scss'],
+	            src: ['*.scss'],
 	            dest: 'assets/css',
 	            ext: '.css'
 	        }

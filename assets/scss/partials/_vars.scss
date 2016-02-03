@@ -9,6 +9,13 @@ $range-width: 15rem;
 	-moz-border-radius:	$radius;
 	border-radius: $radius;
 }
+
+@mixin shadow($shadow-params) {
+	-webkit-box-shadow: $shadow-params;
+	-moz-box-shadow: $shadow-params;
+	box-shadow: $shadow-params;
+}
+
 @mixin input-focus {
 	border: $focus-border;
 	box-shadow: $focus-shadow;
@@ -59,13 +66,7 @@ $range-width: 15rem;
 				display: block;
 				padding-left: 2.0rem;
 				background: $main-nav-color;
-				&:nth-child(2) {margin-left: 0; } /*fix to reset hack*/
 			}
-		}
-		.right-container {
-			position: relative;
-			display: block;
-			margin-top: 1.7rem;
 		}
 	}
 }
