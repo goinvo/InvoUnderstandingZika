@@ -34,16 +34,19 @@ h1 {
 	font-size:$font-size-large-title;
 	line-height: $line-height-title-large;
 	font-weight: 300;
+	text-transform: uppercase;
 }
 h2 {
 	font-size:$font-size-title;
 	line-height: $line-height-title;
 	font-weight: 300;
+	text-transform: uppercase;
 }
 h3 {
 	font-size: $font-size-small-title;
 	line-height: $line-height-title;
 	font-weight: 300;
+	text-transform: uppercase;
 }
 
 strong {

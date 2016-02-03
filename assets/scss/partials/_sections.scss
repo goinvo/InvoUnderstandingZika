@@ -1,0 +1,58 @@
+#spread {
+	.way_spread {
+		display: inline-block;
+		border: solid #000 1px;
+		width: 30%;
+	}
+}
+#prevent {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			margin-bottom: 1.2rem;
+		}
+		.image, .description {
+			display: inline-block;
+		}
+		.image {
+			height: 4.5rem;
+			width: 4.5rem;
+			background: #48484a;
+			margin-right: 1.2rem;
+		}	
+		.description {
+			vertical-align: top;
+			width: 75%;
+			margin-top: -0.6rem;
+		}
+	}
+}
+#signs {
+	.text, .signs-image {
+		display: inline-block;
+		border: solid #000 1px;
+	}
+	.text {
+		width: 30%;
+	}
+	.signs-image {
+		width: 66%;
+		height: 100px;
+	}
+}
+#where {
+	#where-list {
+		background: $app-red;
+		margin-left: -5.0rem;
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			li {
+				width: 40%;
+			}
+		}
+	}
+}
