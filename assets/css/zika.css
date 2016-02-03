@@ -370,6 +370,18 @@ img.scale-with-grid {
   clear: both; }
 
 /* Application styles */
+.providers {
+  display: block;
+  position: absolute;
+  right: 0;
+  background: #8f2741;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  border-radius: 1.2rem;
+  padding: 1.2rem 1.9rem 1.2rem 1.9rem;
+  font-size: 1.8rem;
+  z-index: 3; }
+
 nav {
   position: fixed;
   top: 0;
@@ -411,17 +423,13 @@ nav {
             text-decoration: none; }
         nav .menu ul li.active {
           background: #5b0d1d; }
-
-.providers {
-  display: block;
-  position: absolute;
-  right: 0;
-  background: #8f2741;
-  border-bottom-left-radius: 1.2rem;
-  border-bottom-right-radius: 1.2rem;
-  padding: 1.2rem 1.9rem 1.2rem 1.9rem;
-  font-size: 1.8rem;
-  z-index: 3; }
+  nav .providers {
+    -webkit-border-radius: 0rem;
+    -moz-border-radius: 0rem;
+    border-radius: 0rem;
+    border-bottom-left-radius: 1.2rem;
+    border-bottom-right-radius: 1.2rem;
+    z-index: 3; }
 
 .header {
   z-index: 1;
@@ -453,6 +461,12 @@ nav {
     right: 0;
     margin-right: 2.0rem;
     margin-top: 2.0rem; }
+  .header .providers {
+    bottom: 0;
+    margin-bottom: -2rem;
+    -webkit-box-shadow: 0 0 0.8rem 0 rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: 0 0 0.8rem 0 rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0.8rem 0 rgba(255, 255, 255, 0.4); }
 
 .article {
   z-index: 1;

@@ -66,6 +66,17 @@ img.scale-with-grid {
 }
 
 /* Application styles */
+.providers {
+	display: block;
+	position: absolute;
+	right: 0;
+	background: $provider-bg;
+	@include border-radius(1.2rem);
+	padding: 1.2rem 1.9rem 1.2rem 1.9rem;
+	font-size: $font-size-base;
+	z-index: 3;
+}
+
 nav{
 	position: fixed;
 	top: 0;
@@ -102,18 +113,12 @@ nav{
 			}
 		}
 	}
-}
-
-.providers {
-	display: block;
-	position: absolute;
-	right: 0;
-	background: $provider-bg;
-	border-bottom-left-radius: 1.2rem;
-	border-bottom-right-radius: 1.2rem;
-	padding: 1.2rem 1.9rem 1.2rem 1.9rem;
-	font-size: $font-size-base;
-	z-index: 3;
+	.providers {
+		@include border-radius(0rem);
+		border-bottom-left-radius: 1.2rem;
+		border-bottom-right-radius: 1.2rem;
+		z-index: 3;
+	}
 }
 
 .header {
@@ -149,6 +154,11 @@ nav{
 		right: 0;
 		margin-right: 2.0rem;
 		margin-top: 2.0rem;
+	}
+	.providers {
+		bottom: 0;
+		margin-bottom: -2rem;
+		@include shadow($glow-shadow);
 	}
 }
 

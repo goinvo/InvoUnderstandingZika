@@ -17,9 +17,10 @@ $main-nav-selected: #5b0d1d; //TBD
 $main-nav-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,.2);
 
 $border-base: #333334 solid 1px;
+$glow-shadow: 0 0 0.8rem 0 rgba(255,255,255,.4);
 
 /*not relevant yet*/
-$shadow: 0 0.1rem 0.3rem 0 rgba(0,0,0,.2);
+$shadow: 0 0.1rem 0.3rem 0 rgba(0,0,0,.4);
 
 $button-base-bg: linear-gradient(to bottom, #fdfdfd 0%,#ececec 100%);
 $button-hover: linear-gradient(to bottom, #efefef 0%,#cecece 100%);
