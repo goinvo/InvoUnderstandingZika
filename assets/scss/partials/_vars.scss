@@ -31,6 +31,18 @@ $range-width: 15rem;
 	  user-select: none;	
 }
 
+@mixin gradient-right {
+	background: -moz-linear-gradient(left, $article-bg 0%, #313131 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, $article-bg 0%,#313131 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, $article-bg 0%,#313131 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@mixin gradient-left {
+	background: -moz-linear-gradient(left, #313131 0%, $article-bg 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #313131 0%, $article-bg 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #313131 0%, $article-bg 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 @mixin range-track {
 	height: 0.5rem;
 	border-radius:0.4rem;

@@ -74,6 +74,10 @@ strong {
 .secondary {
   color: #979ba8; }
 
+.warning {
+  color: #b53856;
+  text-transform: uppercase; }
+
 .icon {
   display: inline-block;
   width: 2em;
@@ -102,7 +106,7 @@ body {
   width: 100%;
   float: left;
   box-sizing: border-box;
-  padding: 2.0rem 5.0rem 5.0rem 5.0rem; }
+  padding: 2rem 5rem 5rem 5rem; }
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
@@ -287,8 +291,9 @@ nav {
 /* Larger than Desktop HD */
 #spread .way_spread {
   display: inline-block;
-  border: solid #000 1px;
   width: 30%; }
+  #spread .way_spread img {
+    margin: 0 auto; }
 
 #prevent ul {
   list-style: none;
@@ -300,24 +305,125 @@ nav {
     display: inline-block; }
   #prevent ul .image {
     height: 4.5rem;
-    width: 4.5rem;
-    background: #48484a;
-    margin-right: 1.2rem; }
+    width: 6.5rem;
+    margin-right: 2rem; }
   #prevent ul .description {
     vertical-align: top;
     width: 75%;
-    margin-top: -0.6rem; }
+    margin-top: -0.4rem; }
 
-#signs .text, #signs .signs-image {
-  display: inline-block;
-  border: solid #000 1px; }
+.column#signs {
+  padding-right: 0;
+  background: -moz-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1a1a1b 0%, #313131 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+  .column#signs .text, .column#signs .signs-image {
+    display: inline-block;
+    vertical-align: top; }
+  .column#signs .text {
+    width: 30%;
+    padding-right: 2rem; }
+  .column#signs .signs-image {
+    width: 55%;
+    height: 100px;
+    z-index: 3; }
 
-#signs .text {
-  width: 30%; }
+.row#symptoms-zika .column {
+  border-left: none; }
 
-#signs .signs-image {
-  width: 66%;
-  height: 100px; }
+.row#symptoms-zika .signs-image {
+  background: -moz-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1a1a1b 0%, #313131 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
-#where #where-list {
-  background: #852138; }
+.row#symptoms-microcephaly .column {
+  border-left: none; }
+
+.row#symptoms-microcephaly .microceph-image {
+  background: -moz-linear-gradient(left, #313131 0%, #1a1a1b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #313131 0%, #1a1a1b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #313131 0%, #1a1a1b 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+.row#where .column#traveled, .row#where .column#now {
+  padding: 0; }
+  .row#where .column#traveled h2, .row#where .column#now h2 {
+    padding: 0 0 0 5rem; }
+
+.row#where .column#traveled img {
+  width: 100%; }
+
+.row#where .column#now {
+  width: 34.6666666667%; }
+
+.row#where #where-map {
+  background: #88b9d4; }
+
+.row#where #where-list {
+  background: #7e1329;
+  padding: 5rem; }
+  .row#where #where-list #americas h2 {
+    margin: 0;
+    padding: 0; }
+  .row#where #where-list #americas ul {
+    display: inline-block; }
+  .row#where #where-list #pacific, .row#where #where-list #africa {
+    display: inline-block;
+    vertical-align: top; }
+  .row#where #where-list ul {
+    vertical-align: top;
+    list-style: none;
+    margin: 0;
+    padding: 0 4rem 0 0; }
+    .row#where #where-list ul li {
+      font-size: 1.4rem;
+      line-height: 1.4rem;
+      padding: 0.2rem 0 0.2rem 0; }
+  .row#where #where-list #pacific {
+    padding-right: 0.5rem; }
+
+.row#zika-timeline {
+  overflow: hidden; }
+  .row#zika-timeline h2 {
+    text-align: center; }
+  .row#zika-timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .row#zika-timeline ul li {
+      display: inline-block;
+      width: 26.7rem;
+      padding: 0 8rem 0 8rem;
+      vertical-align: top; }
+      .row#zika-timeline ul li h2 {
+        padding: 0.2rem;
+        margin: 0 auto;
+        text-transform: none;
+        background: #7e1329; }
+      .row#zika-timeline ul li .timeline-image {
+        height: 18rem;
+        width: 28rem;
+        border: solid #000 1px; }
+  .row#zika-timeline .slider {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 100px; }
+    .row#zika-timeline .slider ul {
+      list-style: outside none;
+      padding: 0;
+      margin: 0;
+      width: 10000%;
+      position: relative;
+      top: 0;
+      right: 0;
+      transition: all 0.6s ease; }
+      .row#zika-timeline .slider ul li {
+        float: left; }

@@ -1,8 +1,10 @@
 #spread {
 	.way_spread {
 		display: inline-block;
-		border: solid #000 1px;
 		width: 30%;
+		img {
+			margin: 0 auto;
+		}
 	}
 }
 #prevent {
@@ -18,41 +20,143 @@
 		}
 		.image {
 			height: 4.5rem;
-			width: 4.5rem;
-			background: #48484a;
-			margin-right: 1.2rem;
-		}	
+			width: 6.5rem;
+			margin-right: 2rem;
+		}
 		.description {
 			vertical-align: top;
 			width: 75%;
-			margin-top: -0.6rem;
+			margin-top: -0.4rem;
 		}
 	}
 }
-#signs {
+.column#signs {
+	padding-right: 0;
+	//position: relative;
+	@include gradient-right;
+	
 	.text, .signs-image {
 		display: inline-block;
-		border: solid #000 1px;
+		vertical-align: top;
 	}
 	.text {
 		width: 30%;
+		padding-right: 2rem;
 	}
 	.signs-image {
-		width: 66%;
+		width: 55%;
 		height: 100px;
+		z-index: 3;
+		//vertical-align: bottom;
+		//position: absolute;
+		//bottom: 15rem;
 	}
 }
-#where {
-	#where-list {
-		background: $app-red;
-		margin-left: -5.0rem;
-		ul {
-			list-style: none;
-			margin: 0;
+.row#symptoms-zika {
+	.column {
+		border-left: none;
+	}
+	.signs-image {
+		@include gradient-right;
+	}
+}
+.row#symptoms-microcephaly {
+	.column {
+		border-left: none;
+	}
+	.microceph-image {
+		@include gradient-left;
+	}
+}
+.row#where {
+	.column {
+		&#traveled, &#now {
 			padding: 0;
-			li {
-				width: 40%;
+			h2 {
+				padding: 0 0 0 5rem;
 			}
 		}
+		&#traveled {
+			img {
+				width: 100%;
+			}
+		}
+		&#now {
+			width: 34.6666666667%;
+		}
+	}
+	#where-map { background: #88b9d4;}
+	#where-list {
+		background: $app-red;
+		padding: 5rem;
+		#americas {
+			h2 { margin: 0; padding: 0;}
+			ul { display: inline-block; }
+		}
+		#pacific, #africa { display: inline-block; vertical-align: top;}
+		ul {
+			vertical-align: top;
+			list-style: none;
+			margin: 0;
+			padding: 0 4rem 0 0;
+			li {
+				font-size: $font-size-small;
+				line-height: $font-size-small;
+				padding: 0.2rem 0 0.2rem 0;
+			}
+		}
+		#pacific {
+			padding-right: 0.5rem;
+		}
+	}
+}
+
+.row#zika-timeline {
+	overflow: hidden;
+	h2 {
+		text-align: center;
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		li {
+			display:inline-block;
+			width: 26.7rem;
+			padding: 0 8rem 0 8rem;
+			vertical-align: top;
+			h2 {
+				padding: 0.2rem;
+				margin: 0 auto;
+				text-transform: none;
+				background: $app-red;
+			}
+			.timeline-image {
+				height: 18rem;
+				width: 28rem;
+				border: solid #000 1px;
+			}
+			.description {
+
+			}
+		}
+	}
+	.slider {
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 100px;
+		ul {
+			list-style: outside none;
+			padding: 0;
+			margin: 0;
+			width: 10000%;
+			position: relative;
+			top: 0;
+			right: 0;
+			transition: all 0.6s ease;
+			li {
+				float: left;
+			}
+	    }
 	}
 }

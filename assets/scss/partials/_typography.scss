@@ -56,7 +56,10 @@ strong {
 .secondary {
 	color: $font-color-secondary;
 }
-
+.warning {
+	color: $font-color-deep-pink;
+	text-transform: uppercase;
+}
 .icon {
 	display: inline-block;
 	width: 2em;
