@@ -1,9 +1,16 @@
 #spread {
 	.way_spread {
 		display: inline-block;
-		width: 30%;
+		&.column {
+			border: none;
+			padding: 0;
+		}
 		img {
+			display: block;
 			margin: 0 auto;
+		}
+		p {
+			text-align: center;
 		}
 	}
 }
@@ -32,7 +39,6 @@
 }
 .column#signs {
 	padding-right: 0;
-	//position: relative;
 	@include gradient-right;
 	
 	.text, .signs-image {
@@ -44,12 +50,9 @@
 		padding-right: 2rem;
 	}
 	.signs-image {
-		width: 55%;
+		width: 60%;
 		height: 100px;
 		z-index: 3;
-		//vertical-align: bottom;
-		//position: absolute;
-		//bottom: 15rem;
 	}
 }
 .row#symptoms-zika {
@@ -66,55 +69,108 @@
 	}
 	.microceph-image {
 		@include gradient-left;
+		//vertical-align: bottom;
+		img {
+			//vertical-align: top;
+		}
 	}
 }
 .row#where {
-	.column {
-		&#traveled, &#now {
-			padding: 0;
-			h2 {
-				padding: 0 0 0 5rem;
-			}
+	h2 {
+		text-align: center;
+	}
+	#traveled, #now {
+		padding: 0;
+		margin: 0;
+	}
+	#traveled {
+		h2 {
+			z-index: 5;
+			//color: #323232;
 		}
-		&#traveled {
-			img {
-				width: 100%;
-			}
-		}
-		&#now {
-			width: 34.6666666667%;
+		img {
+			//margin-top: -5rem;
+			z-index: 1;
+			width: 100%;
 		}
 	}
-	#where-map { background: #88b9d4;}
-	#where-list {
-		background: $app-red;
-		padding: 5rem;
-		#americas {
-			h2 { margin: 0; padding: 0;}
-			ul { display: inline-block; }
+	#now {
+		margin-top: -5rem;
+		background: $app-pink;
+		padding: 0 5rem 5rem 5rem;
+		h2 span {
+			background: rgba(42,42,42,.7);
+			padding-left: 2rem;
+			padding-right: 2rem;
+			sup a:hover {
+				color: #fff;
+			}
 		}
-		#pacific, #africa { display: inline-block; vertical-align: top;}
+		
+		#americas, #pacific, #africa { 
+			display: inline-block; 
+			vertical-align: top;
+			padding: 0;
+			margin-right: 3rem;
+			h3 { 
+				margin: 0; 
+				padding: 0;
+				border-bottom: solid 1px #fff;
+			}
+		}
 		ul {
 			vertical-align: top;
 			list-style: none;
 			margin: 0;
-			padding: 0 4rem 0 0;
-			li {
-				font-size: $font-size-small;
-				line-height: $font-size-small;
-				padding: 0.2rem 0 0.2rem 0;
-			}
-		}
-		#pacific {
-			padding-right: 0.5rem;
+			padding: 0;
+			display: inline-block;
 		}
 	}
 }
 
 .row#zika-timeline {
 	overflow: hidden;
+	position: relative;
+	border-top:$border-base;
+	.slider-header {
+		margin-bottom: 5rem;
+	}
 	h2 {
 		text-align: center;
+	}
+	.timeline-arrow {
+		display: inline-block;
+		border-radius: 3rem;
+		height: 6rem;
+		width: 6rem;
+		margin-top: -1rem;
+		&.right {
+			right: 5rem;
+			position: absolute;
+		}
+		&.left {
+			left: 5rem;
+			position: absolute;
+		}
+		a {
+			height: 3rem;
+			width: 1.5rem;
+			display: inline-block;
+		}
+		&.right a {
+			background: url("../images/slider-arrow.png") no-repeat;
+			background-position: 20% 50%;
+			padding: 1.5rem;
+			transform: rotate(180deg);
+		}
+		&.left a {
+			background: url("../images/slider-arrow.png") no-repeat;
+			background-position: 65% 50%;
+			padding: 1.5rem;
+		}
+		&:hover {
+			background: $app-pink;
+		}
 	}
 	ul {
 		list-style: none;
@@ -125,16 +181,30 @@
 			width: 26.7rem;
 			padding: 0 8rem 0 8rem;
 			vertical-align: top;
-			h2 {
-				padding: 0.2rem;
+			span.year {
+				font-family: $font-family-title;
+				font-weight: 300;
+				font-size:$font-size-title;
+				padding: 0.6rem;
 				margin: 0 auto;
-				text-transform: none;
-				background: $app-red;
+				background: $app-pink;
+				z-index: 4;
+				display:table;
+				margin-left: auto;
+				margin-right: auto;
+				margin-top: 2rem;
+				margin-bottom: 2rem;
 			}
 			.timeline-image {
 				height: 18rem;
 				width: 28rem;
 				border: solid #000 1px;
+				img {
+					height: 18rem;
+					width: 28rem;
+					object-fit: cover;
+				}
+				
 			}
 			.description {
 
@@ -158,5 +228,130 @@
 				float: left;
 			}
 	    }
+	}
+	.line {
+		height: 1.2rem;
+		width: 100%;
+		position: absolute;
+		background: $app-pink;
+		top: 20rem;
+	}
+}
+
+.column#prevent-2 {
+	width: 78%;
+	padding-right: 0;
+	.column {
+		border: none;
+		padding: 0 5rem 3rem 0;
+		.image {
+			height: 9rem;
+			margin-bottom: 2rem;
+			img {
+				display: block;	
+    			margin: 0 auto;
+			}
+		}
+	}
+}
+
+.column#right-spray {
+	background: $app-pink;
+	padding-right: 0;
+	width: 22%;
+	height: 100%;
+	.sprays {
+		margin: 5rem 0 5rem 0;
+		h3 {
+			font-family: $font-family;
+			font-weight: 700;
+			text-transform: none;
+			line-height: $font-size-base + 1rem;
+		}
+	}
+	h3, p {padding-right: 5rem;}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		li {
+			width: 28%;
+			padding: 0 2rem 2rem 0;
+			display: inline-block;
+		}
+	}
+}
+
+.column#transmission {
+	.columns {
+		padding-left: 0;
+		&:last-child {
+			padding-right: 0;
+		}
+		&.three {
+			width: 25%;
+		}
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+#treatments {
+	.column {
+		padding: 0;
+		margin: 0;
+		border: none;
+	}
+	.treatment-header {
+		background: $app-pink;
+		position: relative;
+		h2 {
+			//padding-top: 5rem;
+			//padding-bottom: 5rem;
+			padding-left: 5rem;
+		}
+		h2, .treatment-image {
+			display: inline-block;
+		}
+	}
+	ul {
+		margin-left: 0;
+		padding-left: 0;
+		list-style: circle;
+	}
+
+	.treatment-plan {
+		border-left: $border-base;
+		padding: 5rem;
+	}
+	#treatment-adults {
+		.treatment-image img{
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			padding-right: 2rem;
+		}
+	}
+	#treatment-pregnant {
+		h2 {
+			margin-left: 5rem;
+		}
+		.treatment-image img{
+			position: absolute;
+			bottom: 0;
+			padding-left: 2rem;
+		}
+	}
+}
+
+#action-plan {
+	border-top: $border-base;
+	h2 {
+		padding-left: 5rem;
+	}
+	.columns.three {
+		width: 25%;
 	}
 }

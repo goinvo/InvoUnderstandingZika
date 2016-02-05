@@ -104,6 +104,7 @@ nav{
 				@include no-select;
 				&:hover { background: $main-nav-selected; }
 				a {
+					text-decoration: none;
 					color: $font-color-nav;
 					&:hover { text-decoration: none; }
 				}
@@ -125,10 +126,13 @@ nav{
 	z-index: 1;
 	position: relative;
 	background: $app-red;
+	background: url("../images/header.png");
+	background-size: cover;
+	background-position: center center;
 	margin-top: 19.6rem;
-	height: 38.0rem;
+	height: 37.6rem;
 	@include shadow($main-nav-shadow);
-	border: solid #000 1px;
+	//border: solid #000 1px;
 
 	.title {
 		margin: 0 auto;
@@ -148,7 +152,7 @@ nav{
 	}
 
 	.header-note {
-		font-size: $font-size-small;
+		font-size: 1rem;;
 		position: absolute;
 		top: 0;
 		right: 0;
@@ -179,8 +183,14 @@ nav{
 	
 }
 
-
-
+.footer {
+	span {
+		font-size: $font-size-small;
+		margin: 3.5rem; 
+		margin-left: 5rem;
+		display: block;
+	}
+}
 
 
 /* Larger than mobile */

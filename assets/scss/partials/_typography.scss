@@ -2,11 +2,11 @@ html {
 	font-size: 62.5%; /*base 10*/
 }
 
-$font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$font-family-serif: 'Jenson Pro', Georgia;
+$font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-family-title: 'Open Sans Condensed', Helvetica, Arial, sans-serif;
 $font-size-small: 1.4rem; /* =12px */
 $font-size-base: 1.8rem; /* =20pt */
-$font-size-small-title: 1.8rem; /* =14px */
+$font-size-small-title: 2.4rem; /* =14px */
 $font-size-title: 3.8rem; /* =38px */
 $font-size-large-title: 3.0rem; /* = 24px*/
 $line-height-base: $font-size-base + 1rem; /*=16px*/
@@ -23,32 +23,54 @@ body {
 
 a {
 	color: $font-color-link;
-	text-decoration: none;
 
 	&:hover {
-		text-decoration: underline;
+		color: #323232;
 	}
 }
+sup {
+	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+h1, h2, h3 {
+	font-family: $font-family-title;
+	font-weight: 300;
+	text-transform: uppercase;
 
+}
 h1 {
 	font-size:$font-size-large-title;
 	line-height: $line-height-title-large;
-	font-weight: 300;
-	text-transform: uppercase;
 }
 h2 {
 	font-size:$font-size-title;
 	line-height: $line-height-title;
-	font-weight: 300;
-	text-transform: uppercase;
+	sup {
+		font-size: 1.6rem;
+		padding-left: 0.6rem;
+		top: -0.6rem;
+	}
 }
 h3 {
 	font-size: $font-size-small-title;
 	line-height: $line-height-title;
-	font-weight: 300;
-	text-transform: uppercase;
 }
-
+p {
+	padding-top: 0;
+	margin-top: 0;
+	sup {
+		font-size: 1.2rem;
+		padding-left: 0.4rem;
+		top: -0.6rem;
+		a {
+			text-decoration: none;
+		}
+	}
+}
 strong {
 	font-weight: 700;
 }
@@ -60,15 +82,6 @@ strong {
 	color: $font-color-deep-pink;
 	text-transform: uppercase;
 }
-.icon {
-	display: inline-block;
-	width: 2em;
-	height: 2em;
-	fill: currentColor;
-
-	&.icon-Navigationdown {
-		width: 1.0rem;
-		height: 1.0rem;
-		padding-left: 0.5rem;
-	}
+.arrow {
+	color: $font-color-deep-pink;
 }
