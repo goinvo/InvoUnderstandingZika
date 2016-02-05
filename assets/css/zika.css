@@ -191,7 +191,12 @@ nav {
   top: 0;
   width: 90%;
   max-width: 1500px;
-  z-index: 4; }
+  z-index: 4;
+  opacity: 0;
+  transition: opacity .5s; }
+  nav.scrolled {
+    opacity: 1;
+    transition: opacity .5s; }
   nav .menu {
     z-index: 10;
     -webkit-box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
@@ -209,7 +214,7 @@ nav {
       padding: 0; }
       nav .menu ul li {
         display: inline-block;
-        padding: 2.1rem 2.8rem 2.1rem 2.8rem;
+        padding: 2.1rem 2rem 2.1rem 2rem;
         line-height: 2.2rem;
         box-sizing: border-box;
         -webkit-user-select: none;
@@ -243,7 +248,6 @@ nav {
   background: url("../images/header.png");
   background-size: cover;
   background-position: center center;
-  margin-top: 19.6rem;
   height: 37.6rem;
   -webkit-box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.2);
@@ -431,36 +435,38 @@ nav {
     height: 6rem;
     width: 6rem;
     margin-top: -1rem; }
-    .row#zika-timeline .timeline-arrow.right {
+    .row#zika-timeline .timeline-arrow.next {
       right: 5rem;
       position: absolute; }
-    .row#zika-timeline .timeline-arrow.left {
+    .row#zika-timeline .timeline-arrow.prev {
       left: 5rem;
       position: absolute; }
-    .row#zika-timeline .timeline-arrow a {
+    .row#zika-timeline .timeline-arrow .arrow {
       height: 3rem;
       width: 1.5rem;
       display: inline-block; }
-    .row#zika-timeline .timeline-arrow.right a {
+    .row#zika-timeline .timeline-arrow.next .arrow {
       background: url("../images/slider-arrow.png") no-repeat;
       background-position: 20% 50%;
       padding: 1.5rem;
       transform: rotate(180deg); }
-    .row#zika-timeline .timeline-arrow.left a {
+    .row#zika-timeline .timeline-arrow.prev .arrow {
       background: url("../images/slider-arrow.png") no-repeat;
       background-position: 65% 50%;
       padding: 1.5rem; }
     .row#zika-timeline .timeline-arrow:hover {
-      background: #8f2741; }
+      background: #8f2741;
+      cursor: pointer; }
   .row#zika-timeline ul {
     list-style: none;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    padding-left: 5rem; }
     .row#zika-timeline ul li {
       display: inline-block;
       width: 26.7rem;
-      padding: 0 8rem 0 8rem;
-      vertical-align: top; }
+      vertical-align: top;
+      margin-left: 5rem; }
       .row#zika-timeline ul li span.year {
         font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
         font-weight: 300;

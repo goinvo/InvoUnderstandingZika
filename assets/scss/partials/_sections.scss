@@ -144,43 +144,46 @@
 		height: 6rem;
 		width: 6rem;
 		margin-top: -1rem;
-		&.right {
+		&.next {
 			right: 5rem;
 			position: absolute;
 		}
-		&.left {
+		&.prev {
 			left: 5rem;
 			position: absolute;
 		}
-		a {
+		.arrow {
 			height: 3rem;
 			width: 1.5rem;
 			display: inline-block;
 		}
-		&.right a {
+		&.next .arrow {
 			background: url("../images/slider-arrow.png") no-repeat;
 			background-position: 20% 50%;
 			padding: 1.5rem;
 			transform: rotate(180deg);
 		}
-		&.left a {
+		&.prev .arrow {
 			background: url("../images/slider-arrow.png") no-repeat;
 			background-position: 65% 50%;
 			padding: 1.5rem;
 		}
 		&:hover {
 			background: $app-pink;
+			cursor: pointer;
 		}
 	}
 	ul {
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		padding-left: 5rem;
 		li {
 			display:inline-block;
 			width: 26.7rem;
-			padding: 0 8rem 0 8rem;
+			//padding: 0 2rem 0 2rem;
 			vertical-align: top;
+			margin-left: 5rem;
 			span.year {
 				font-family: $font-family-title;
 				font-weight: 300;
@@ -204,10 +207,6 @@
 					width: 28rem;
 					object-fit: cover;
 				}
-				
-			}
-			.description {
-
 			}
 		}
 	}
