@@ -23,6 +23,7 @@ body {
 
 a {
 	color: $font-color-link;
+	word-break: break-all;
 
 	&:hover {
 		color: #323232;
@@ -58,6 +59,16 @@ h2 {
 h3 {
 	font-size: $font-size-small-title;
 	line-height: $line-height-title;
+}
+@media (max-width: $phone) {
+	h1 {
+		font-size:$font-size-title;
+		line-height: $line-height-title;
+	}
+	h2 {
+		font-size: $font-size-small-title;
+		line-height: $line-height-title;
+	}
 }
 p {
 	padding-top: 0;

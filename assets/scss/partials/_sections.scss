@@ -34,28 +34,45 @@
 			vertical-align: top;
 			width: 75%;
 			margin-top: -0.4rem;
+			@media (max-width: $tablet) {
+				width: 90%;
+			}
 		}
 	}
 }
 .column#signs {
 	padding-right: 0;
 	@include gradient-right;
-	
-	.text, .signs-image {
-		display: inline-block;
-		vertical-align: top;
-	}
 	.text {
 		width: 30%;
 		padding-right: 2rem;
 	}
 	.signs-image {
+		position: relative;
 		width: 60%;
 		height: 100px;
-		z-index: 3;
+		z-index: 4;
+		
+		@media (max-width: $tablet) {
+			min-height: 42rem;
+		}
+		@media (max-width: 575px) {
+			min-height: 38rem;
+		}
+		@media (max-width: $phone) {
+			min-height: 30rem;	
+		}
+	}
+	.text, .signs-image {
+		display: inline-block;
+		vertical-align: top;
+		@media (max-width: $tablet) {
+			display: block;
+			width: 90%;
+		}
 	}
 }
-.row#symptoms-zika {
+.row#zika-symptoms {
 	.column {
 		border-left: none;
 	}
@@ -252,6 +269,9 @@
 			}
 		}
 	}
+	@media (max-width: $tablet) {
+		width: 100%;
+	}
 }
 
 .column#right-spray {
@@ -259,6 +279,10 @@
 	padding-right: 0;
 	width: 22%;
 	height: 100%;
+	@media (max-width: $tablet) {
+		display: block;
+		width: 100%;
+	}
 	.sprays {
 		margin: 5rem 0 5rem 0;
 		h3 {
@@ -277,11 +301,12 @@
 			width: 28%;
 			padding: 0 2rem 2rem 0;
 			display: inline-block;
+			
 		}
 	}
 }
 
-.column#causes {
+.column#transmission {
 	.columns {
 		padding-left: 0;
 		&:last-child {
@@ -289,6 +314,11 @@
 		}
 		&.three {
 			width: 25%;
+			@media (max-width: $tablet) {
+				display: block;
+				padding-right: 0;
+				width: 100%;
+			}
 		}
 		img {
 			display: block;
@@ -352,5 +382,9 @@
 	}
 	.columns.three {
 		width: 25%;
+		@media (max-width: $tablet) {
+			display: block;
+			width: 90%;
+		}
 	}
 }
