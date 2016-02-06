@@ -116,13 +116,6 @@ nav{
 		opacity: 1;
 		transition: opacity .5s;
 	}
-	ul{
-		&:first-child{
-			@media (max-width: $tablet) {
-
-			}
-		}
-	}
 	
 	.menu {
 		z-index: 10;
@@ -156,7 +149,7 @@ nav{
 			li {
 				display:inline-block;
 				cursor: pointer;
-				padding: 2.1rem 2rem 2.1rem 2rem; 
+				padding: 2.1rem 1.5rem 2.1rem 1.5rem; 
 				line-height: 2.2rem; 
 				box-sizing: border-box;
 
@@ -179,9 +172,17 @@ nav{
 				}
 				@media (max-width: 480px) {
 					display: block;
+					
+					background: $main-nav-color;
+					
+				}
+				@media (max-width: $tablet) {
+					display: none;
 					padding-left: 5rem;
 					padding-right: 5rem;
-					background: $main-nav-color;
+					&#page-title, &#expand {
+						display: inline-block;
+					}
 					&#expand {
 						padding-left: 2rem;
 						padding-right: 2rem;
@@ -190,13 +191,6 @@ nav{
 					&#page-title {
 						padding-left: 2rem;
 						padding-right: 2rem;
-					}
-				}
-				@media (max-width: $tablet) {
-					display: none;
-
-					&#page-title, &#expand {
-						display: inline-block;
 					}
 				}
 				&:hover { background: $main-nav-selected; }
@@ -290,9 +284,6 @@ nav{
 	
 }
 
-.references{
-	word-break: break-all;
-}
 .footer {
 	span {
 		font-size: $font-size-small;

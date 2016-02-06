@@ -256,7 +256,7 @@ nav {
       nav .menu ul li {
         display: inline-block;
         cursor: pointer;
-        padding: 2.1rem 2rem 2.1rem 2rem;
+        padding: 2.1rem 1.5rem 2.1rem 1.5rem;
         line-height: 2.2rem;
         box-sizing: border-box; }
         nav .menu ul li#page-title, nav .menu ul li#expand {
@@ -275,9 +275,14 @@ nav {
         @media (max-width: 480px) {
           nav .menu ul li {
             display: block;
+            background: #7e1329; } }
+        @media (max-width: 767px) {
+          nav .menu ul li {
+            display: none;
             padding-left: 5rem;
-            padding-right: 5rem;
-            background: #7e1329; }
+            padding-right: 5rem; }
+            nav .menu ul li#page-title, nav .menu ul li#expand {
+              display: inline-block; }
             nav .menu ul li#expand {
               padding-left: 2rem;
               padding-right: 2rem;
@@ -285,11 +290,6 @@ nav {
             nav .menu ul li#page-title {
               padding-left: 2rem;
               padding-right: 2rem; } }
-        @media (max-width: 767px) {
-          nav .menu ul li {
-            display: none; }
-            nav .menu ul li#page-title, nav .menu ul li#expand {
-              display: inline-block; } }
         nav .menu ul li:hover {
           background: #5b0d1d; }
         nav .menu ul li a {
@@ -364,9 +364,6 @@ nav {
   .article .column {
     border-left: #333334 solid 1px;
     border-top: #333334 solid 1px; }
-
-.references {
-  word-break: break-all; }
 
 .footer span {
   font-size: 1.4rem;
@@ -453,6 +450,11 @@ nav {
   background: linear-gradient(to right, #1a1a1b 0%, #313131 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
+@media (max-width: 767px) {
+  .row#zika-symptoms .column.signs-image {
+    border-top: none;
+    background: transparent; } }
+
 .row#symptoms-microcephaly .column {
   border-left: none; }
 
@@ -463,6 +465,13 @@ nav {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #313131 0%, #1a1a1b 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+@media (max-width: 767px) {
+  .row#symptoms-microcephaly .column {
+    border: none; }
+  .row#symptoms-microcephaly .column.microceph-image {
+    border-top: #333334 solid 1px;
+    background: transparent; } }
 
 .row#where-is-zika h2 {
   text-align: center; }
@@ -492,7 +501,8 @@ nav {
     display: inline-block;
     vertical-align: top;
     padding: 0;
-    margin-right: 3rem; }
+    margin-right: 3rem;
+    margin-top: 3rem; }
     .row#where-is-zika #now #americas h3, .row#where-is-zika #now #pacific h3, .row#where-is-zika #now #africa h3 {
       margin: 0;
       padding: 0;
@@ -697,3 +707,10 @@ nav {
       #action-plan .columns.three {
         display: block;
         width: 90%; } }
+
+#references ol {
+  margin: 0;
+  padding: 0; }
+
+#references a {
+  word-break: normal; }

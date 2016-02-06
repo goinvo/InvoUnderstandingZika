@@ -79,6 +79,12 @@
 	.signs-image {
 		@include gradient-right;
 	}
+	@media (max-width: $tablet) {
+		.column.signs-image {
+			border-top: none;
+			background: transparent;
+		}
+	}
 }
 .row#symptoms-microcephaly {
 	.column {
@@ -86,9 +92,12 @@
 	}
 	.microceph-image {
 		@include gradient-left;
-		//vertical-align: bottom;
-		img {
-			//vertical-align: top;
+	}
+	@media (max-width: $tablet) {
+		.column { border: none;}
+		.column.microceph-image {
+			border-top: $border-base;
+			background: transparent;
 		}
 	}
 }
@@ -129,6 +138,7 @@
 			vertical-align: top;
 			padding: 0;
 			margin-right: 3rem;
+			margin-top: 3rem;
 			h3 { 
 				margin: 0; 
 				padding: 0;
@@ -386,5 +396,15 @@
 			display: block;
 			width: 90%;
 		}
+	}
+}
+
+#references {
+	ol {
+		margin: 0;
+		padding: 0;
+	}
+	a {
+		word-break: normal;
 	}
 }
