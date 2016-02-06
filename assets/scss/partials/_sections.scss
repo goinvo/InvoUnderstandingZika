@@ -75,7 +75,7 @@
 		}
 	}
 }
-.row#where {
+.row#where-is-zika {
 	h2 {
 		text-align: center;
 	}
@@ -128,7 +128,7 @@
 	}
 }
 
-.row#zika-timeline {
+.row#timeline {
 	overflow: hidden;
 	position: relative;
 	border-top:$border-base;
@@ -237,7 +237,7 @@
 	}
 }
 
-.column#prevent-2 {
+.column#prevention {
 	width: 78%;
 	padding-right: 0;
 	.column {
@@ -281,7 +281,7 @@
 	}
 }
 
-.column#transmission {
+.column#causes {
 	.columns {
 		padding-left: 0;
 		&:last-child {

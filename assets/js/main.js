@@ -3,7 +3,7 @@ $(document).ready(function() {
 
 	$(window).bind('scroll', function() {
 	    var distance = 50;
-	    console.log("scroll");
+	    
 	    if ($(window).scrollTop() > distance) {
 	      $('nav').addClass('scrolled');
 	    }
@@ -12,4 +12,17 @@ $(document).ready(function() {
 	    }
 	  });
 
+	$(".menu li").bind("click", function(){
+		var ul = $(this).parent();
+
+		if($(ul).hasClass("opened")){
+			$(ul).removeClass("opened");
+		}else{
+			$(ul).addClass("opened");
+		}
+		if($(this).attr("id") === "page-title"){
+			window.scrollTo(0,0);
+			$(ul).removeClass("opened");
+		}
+	});
 });

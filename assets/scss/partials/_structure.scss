@@ -77,6 +77,8 @@ img.scale-with-grid {
 	z-index: 3;
 }
 
+
+
 nav{
 	position: fixed;
 	top: 0;
@@ -88,8 +90,15 @@ nav{
 	&.scrolled {
 		opacity: 1;
 		transition: opacity .5s;
-
 	}
+	ul{
+		&:first-child{
+			@media (max-width: $tablet) {
+
+			}
+		}
+	}
+	
 	.menu {
 		z-index: 10;
 		@include shadow($main-nav-shadow);
@@ -98,16 +107,63 @@ nav{
 		color: $font-color-nav;
 		font-size: $font-size-base;
 		position: relative;
+
+		@media (max-width: $tablet) {
+ 			z-index: 5;
+ 		}
 		ul {
 			list-style: none;
 			display: inline-block;
 			margin: 0;
 			padding: 0;
+
+			@media (max-width: 480px) {
+				height: 100%;
+				min-width: 15.0rem;	
+			}
+			@media (max-width: $tablet) {
+				&.opened{
+					li{
+						display: block;
+					}
+				}
+			}
 			li {
 				display:inline-block;
+				cursor: pointer;
 				padding: 2.1rem 2rem 2.1rem 2rem; 
 				line-height: 2.2rem; 
 				box-sizing: border-box;
+
+				@media (max-width: 480px) {
+					display: block;
+					padding-left: 2.0rem;
+					background: $main-nav-color;
+				}
+				@media (max-width: $tablet) {
+					display: none;
+
+					&#page-title, &#expand {
+						display: inline-block;
+					}
+				}
+				&#page-title, &#expand {
+					display: inline-block;
+				}
+				&#page-title {
+					padding-left: 5rem;
+					padding-right: 2rem;
+				}
+				&#expand {
+					display: none;
+					//font-size: 3.6rem;
+					&:hover { background: $main-nav-selected; }
+					line-height: 2.2rem; 
+
+					@media (max-width: $tablet) {
+						display: inline-block;
+					}
+				}
 				@include no-select;
 				&:hover { background: $main-nav-selected; }
 				a {
@@ -128,6 +184,8 @@ nav{
 		z-index: 3;
 	}
 }
+
+
 
 .header {
 	z-index: 1;
@@ -201,16 +259,17 @@ nav{
 
 
 /* Larger than mobile */
-@media (max-width: 480px) {}
+//@media (max-width: 480px) {
+//}
 
 /* Larger than tablet */
-@media (max-width: 760px) {
-	@include menu-small;
-}
+//@media (max-width: 760px) {
+	
+//}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+//@media (min-width: 1000px) {}
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {
-}
+//@media (min-width: 1200px) {
+//}

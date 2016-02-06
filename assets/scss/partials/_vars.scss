@@ -3,6 +3,9 @@ $input-height: 2.7rem;
 $radius-base: 0.2rem;
 $range-width: 15rem;
 
+$phone:487px;
+$tablet:767px; 
+
 /* mix-ins */
 @mixin border-radius($radius) { 
 	-webkit-border-radius: $radius;
@@ -65,20 +68,5 @@ $range-width: 15rem;
 		content:'1-10';
 		color: $font-color-base;
 		size: $font-size-small;
-	}
-}
-
-@mixin menu-small {
-	.menu {
-		z-index: 5;
-		ul {
-			height: 100%;
-			width: 15.0rem;
-			li {
-				display: block;
-				padding-left: 2.0rem;
-				background: $main-nav-color;
-			}
-		}
 	}
 }

@@ -207,13 +207,24 @@ nav {
     color: #fff;
     font-size: 1.8rem;
     position: relative; }
+    @media (max-width: 767px) {
+      nav .menu {
+        z-index: 5; } }
     nav .menu ul {
       list-style: none;
       display: inline-block;
       margin: 0;
       padding: 0; }
+      @media (max-width: 480px) {
+        nav .menu ul {
+          height: 100%;
+          min-width: 15.0rem; } }
+      @media (max-width: 767px) {
+        nav .menu ul.opened li {
+          display: block; } }
       nav .menu ul li {
         display: inline-block;
+        cursor: pointer;
         padding: 2.1rem 2rem 2.1rem 2rem;
         line-height: 2.2rem;
         box-sizing: border-box;
@@ -224,6 +235,29 @@ nav {
         -ms-user-select: none;
         /* IE 10+ */
         user-select: none; }
+        @media (max-width: 480px) {
+          nav .menu ul li {
+            display: block;
+            padding-left: 2.0rem;
+            background: #7e1329; } }
+        @media (max-width: 767px) {
+          nav .menu ul li {
+            display: none; }
+            nav .menu ul li#page-title, nav .menu ul li#expand {
+              display: inline-block; } }
+        nav .menu ul li#page-title, nav .menu ul li#expand {
+          display: inline-block; }
+        nav .menu ul li#page-title {
+          padding-left: 5rem;
+          padding-right: 2rem; }
+        nav .menu ul li#expand {
+          display: none;
+          line-height: 2.2rem; }
+          nav .menu ul li#expand:hover {
+            background: #5b0d1d; }
+          @media (max-width: 767px) {
+            nav .menu ul li#expand {
+              display: inline-block; } }
         nav .menu ul li:hover {
           background: #5b0d1d; }
         nav .menu ul li a {
@@ -299,17 +333,6 @@ nav {
 
 /* Larger than mobile */
 /* Larger than tablet */
-@media (max-width: 760px) {
-  .menu {
-    z-index: 5; }
-    .menu ul {
-      height: 100%;
-      width: 15.0rem; }
-      .menu ul li {
-        display: block;
-        padding-left: 2.0rem;
-        background: #7e1329; } }
-
 /* Larger than desktop */
 /* Larger than Desktop HD */
 #spread .way_spread {
@@ -381,93 +404,93 @@ nav {
   background: linear-gradient(to right, #313131 0%, #1a1a1b 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
-.row#where h2 {
+.row#where-is-zika h2 {
   text-align: center; }
 
-.row#where #traveled, .row#where #now {
+.row#where-is-zika #traveled, .row#where-is-zika #now {
   padding: 0;
   margin: 0; }
 
-.row#where #traveled h2 {
+.row#where-is-zika #traveled h2 {
   z-index: 5; }
 
-.row#where #traveled img {
+.row#where-is-zika #traveled img {
   z-index: 1;
   width: 100%; }
 
-.row#where #now {
+.row#where-is-zika #now {
   margin-top: -5rem;
   background: #8f2741;
   padding: 0 5rem 5rem 5rem; }
-  .row#where #now h2 span {
+  .row#where-is-zika #now h2 span {
     background: rgba(42, 42, 42, 0.7);
     padding-left: 2rem;
     padding-right: 2rem; }
-    .row#where #now h2 span sup a:hover {
+    .row#where-is-zika #now h2 span sup a:hover {
       color: #fff; }
-  .row#where #now #americas, .row#where #now #pacific, .row#where #now #africa {
+  .row#where-is-zika #now #americas, .row#where-is-zika #now #pacific, .row#where-is-zika #now #africa {
     display: inline-block;
     vertical-align: top;
     padding: 0;
     margin-right: 3rem; }
-    .row#where #now #americas h3, .row#where #now #pacific h3, .row#where #now #africa h3 {
+    .row#where-is-zika #now #americas h3, .row#where-is-zika #now #pacific h3, .row#where-is-zika #now #africa h3 {
       margin: 0;
       padding: 0;
       border-bottom: solid 1px #fff; }
-  .row#where #now ul {
+  .row#where-is-zika #now ul {
     vertical-align: top;
     list-style: none;
     margin: 0;
     padding: 0;
     display: inline-block; }
 
-.row#zika-timeline {
+.row#timeline {
   overflow: hidden;
   position: relative;
   border-top: #333334 solid 1px; }
-  .row#zika-timeline .slider-header {
+  .row#timeline .slider-header {
     margin-bottom: 5rem; }
-  .row#zika-timeline h2 {
+  .row#timeline h2 {
     text-align: center; }
-  .row#zika-timeline .timeline-arrow {
+  .row#timeline .timeline-arrow {
     display: inline-block;
     border-radius: 3rem;
     height: 6rem;
     width: 6rem;
     margin-top: -1rem; }
-    .row#zika-timeline .timeline-arrow.next {
+    .row#timeline .timeline-arrow.next {
       right: 5rem;
       position: absolute; }
-    .row#zika-timeline .timeline-arrow.prev {
+    .row#timeline .timeline-arrow.prev {
       left: 5rem;
       position: absolute; }
-    .row#zika-timeline .timeline-arrow .arrow {
+    .row#timeline .timeline-arrow .arrow {
       height: 3rem;
       width: 1.5rem;
       display: inline-block; }
-    .row#zika-timeline .timeline-arrow.next .arrow {
+    .row#timeline .timeline-arrow.next .arrow {
       background: url("../images/slider-arrow.png") no-repeat;
       background-position: 20% 50%;
       padding: 1.5rem;
       transform: rotate(180deg); }
-    .row#zika-timeline .timeline-arrow.prev .arrow {
+    .row#timeline .timeline-arrow.prev .arrow {
       background: url("../images/slider-arrow.png") no-repeat;
       background-position: 65% 50%;
       padding: 1.5rem; }
-    .row#zika-timeline .timeline-arrow:hover {
+    .row#timeline .timeline-arrow:hover {
       background: #8f2741;
       cursor: pointer; }
-  .row#zika-timeline ul {
+  .row#timeline ul {
     list-style: none;
     padding: 0;
     margin: 0;
     padding-left: 5rem; }
-    .row#zika-timeline ul li {
+    .row#timeline ul li {
       display: inline-block;
       width: 26.7rem;
       vertical-align: top;
       margin-left: 5rem; }
-      .row#zika-timeline ul li span.year {
+      .row#timeline ul li span.year {
         font-family: "Open Sans Condensed", Helvetica, Arial, sans-serif;
         font-weight: 300;
         font-size: 3.8rem;
@@ -480,19 +503,19 @@ nav {
         margin-right: auto;
         margin-top: 2rem;
         margin-bottom: 2rem; }
-      .row#zika-timeline ul li .timeline-image {
+      .row#timeline ul li .timeline-image {
         height: 18rem;
         width: 28rem;
         border: solid #000 1px; }
-        .row#zika-timeline ul li .timeline-image img {
+        .row#timeline ul li .timeline-image img {
           height: 18rem;
           width: 28rem;
           object-fit: cover; }
-  .row#zika-timeline .slider {
+  .row#timeline .slider {
     position: relative;
     overflow: hidden;
     margin-bottom: 100px; }
-    .row#zika-timeline .slider ul {
+    .row#timeline .slider ul {
       list-style: outside none;
       padding: 0;
       margin: 0;
@@ -501,25 +524,25 @@ nav {
       top: 0;
       right: 0;
       transition: all 0.6s ease; }
-      .row#zika-timeline .slider ul li {
+      .row#timeline .slider ul li {
         float: left; }
-  .row#zika-timeline .line {
+  .row#timeline .line {
     height: 1.2rem;
     width: 100%;
     position: absolute;
     background: #8f2741;
     top: 20rem; }
 
-.column#prevent-2 {
+.column#prevention {
   width: 78%;
   padding-right: 0; }
-  .column#prevent-2 .column {
+  .column#prevention .column {
     border: none;
     padding: 0 5rem 3rem 0; }
-    .column#prevent-2 .column .image {
+    .column#prevention .column .image {
       height: 9rem;
       margin-bottom: 2rem; }
-      .column#prevent-2 .column .image img {
+      .column#prevention .column .image img {
         display: block;
         margin: 0 auto; }
 
@@ -546,13 +569,13 @@ nav {
       padding: 0 2rem 2rem 0;
       display: inline-block; }
 
-.column#transmission .columns {
+.column#causes .columns {
   padding-left: 0; }
-  .column#transmission .columns:last-child {
+  .column#causes .columns:last-child {
     padding-right: 0; }
-  .column#transmission .columns.three {
+  .column#causes .columns.three {
     width: 25%; }
-  .column#transmission .columns img {
+  .column#causes .columns img {
     display: block;
     margin: 0 auto; }
 
