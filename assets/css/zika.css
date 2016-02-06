@@ -258,24 +258,7 @@ nav {
         cursor: pointer;
         padding: 2.1rem 2rem 2.1rem 2rem;
         line-height: 2.2rem;
-        box-sizing: border-box;
-        -webkit-user-select: none;
-        /* Chrome all / Safari all */
-        -moz-user-select: none;
-        /* Firefox all */
-        -ms-user-select: none;
-        /* IE 10+ */
-        user-select: none; }
-        @media (max-width: 480px) {
-          nav .menu ul li {
-            display: block;
-            padding-left: 2.0rem;
-            background: #7e1329; } }
-        @media (max-width: 767px) {
-          nav .menu ul li {
-            display: none; }
-            nav .menu ul li#page-title, nav .menu ul li#expand {
-              display: inline-block; } }
+        box-sizing: border-box; }
         nav .menu ul li#page-title, nav .menu ul li#expand {
           display: inline-block; }
         nav .menu ul li#page-title {
@@ -288,6 +271,24 @@ nav {
             background: #5b0d1d; }
           @media (max-width: 767px) {
             nav .menu ul li#expand {
+              display: inline-block; } }
+        @media (max-width: 480px) {
+          nav .menu ul li {
+            display: block;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            background: #7e1329; }
+            nav .menu ul li#expand {
+              padding-left: 2rem;
+              padding-right: 2rem;
+              margin-left: 3rem; }
+            nav .menu ul li#page-title {
+              padding-left: 2rem;
+              padding-right: 2rem; } }
+        @media (max-width: 767px) {
+          nav .menu ul li {
+            display: none; }
+            nav .menu ul li#page-title, nav .menu ul li#expand {
               display: inline-block; } }
         nav .menu ul li:hover {
           background: #5b0d1d; }

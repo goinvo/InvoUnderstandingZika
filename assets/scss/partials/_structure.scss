@@ -160,18 +160,6 @@ nav{
 				line-height: 2.2rem; 
 				box-sizing: border-box;
 
-				@media (max-width: 480px) {
-					display: block;
-					padding-left: 2.0rem;
-					background: $main-nav-color;
-				}
-				@media (max-width: $tablet) {
-					display: none;
-
-					&#page-title, &#expand {
-						display: inline-block;
-					}
-				}
 				&#page-title, &#expand {
 					display: inline-block;
 				}
@@ -189,7 +177,28 @@ nav{
 						display: inline-block;
 					}
 				}
-				@include no-select;
+				@media (max-width: 480px) {
+					display: block;
+					padding-left: 5rem;
+					padding-right: 5rem;
+					background: $main-nav-color;
+					&#expand {
+						padding-left: 2rem;
+						padding-right: 2rem;
+						margin-left: 3rem;
+					}
+					&#page-title {
+						padding-left: 2rem;
+						padding-right: 2rem;
+					}
+				}
+				@media (max-width: $tablet) {
+					display: none;
+
+					&#page-title, &#expand {
+						display: inline-block;
+					}
+				}
 				&:hover { background: $main-nav-selected; }
 				a {
 					text-decoration: none;
