@@ -386,24 +386,28 @@ nav {
   #spread .way_spread p {
     text-align: center; }
 
-#prevent ul {
+#overview-prevent ul {
   list-style: none;
   margin: 0;
   padding: 0; }
-  #prevent ul li {
+  #overview-prevent ul li {
     margin-bottom: 1.2rem; }
-  #prevent ul .image, #prevent ul .description {
+  #overview-prevent ul .image, #overview-prevent ul .description {
     display: inline-block; }
-  #prevent ul .image {
-    height: 4.5rem;
+  #overview-prevent ul .image {
+    height: 6.5rem;
     width: 6.5rem;
     margin-right: 2rem; }
-  #prevent ul .description {
+    #overview-prevent ul .image img {
+      height: 6.5rem;
+      width: 6.5rem;
+      object-fit: contain; }
+  #overview-prevent ul .description {
     vertical-align: top;
     width: 75%;
     margin-top: -0.4rem; }
     @media (max-width: 767px) {
-      #prevent ul .description {
+      #overview-prevent ul .description {
         width: 90%; } }
 
 .column#signs {
@@ -489,14 +493,18 @@ nav {
 
 .row#where-is-zika #now {
   margin-top: -5rem;
-  background: #8f2741;
-  padding: 0 5rem 5rem 5rem; }
-  .row#where-is-zika #now h2 span {
-    background: rgba(42, 42, 42, 0.7);
-    padding-left: 2rem;
-    padding-right: 2rem; }
-    .row#where-is-zika #now h2 span sup a:hover {
+  background: #8f2741; }
+  .row#where-is-zika #now h2 {
+    background: #7c1f3a;
+    padding: 3.5rem 5rem 2rem 5rem; }
+    .row#where-is-zika #now h2 sup a:hover {
       color: #fff; }
+    .row#where-is-zika #now h2 .no-caps {
+      text-transform: none;
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-size: 2.4rem; }
+  .row#where-is-zika #now .row {
+    padding: 0 5rem 5rem 5rem; }
   .row#where-is-zika #now #americas, .row#where-is-zika #now #pacific, .row#where-is-zika #now #africa {
     display: inline-block;
     vertical-align: top;
@@ -606,9 +614,13 @@ nav {
 .column#prevention {
   width: 78%;
   padding-right: 0; }
+  .column#prevention .mosquito {
+    background: url("../images/mosquito.png") no-repeat;
+    display: block;
+    z-index: 1; }
   .column#prevention .column {
     border: none;
-    padding: 0 5rem 3rem 0; }
+    padding: 1.5rem 5rem 1.5rem 0; }
     .column#prevention .column .image {
       height: 9rem;
       margin-bottom: 2rem; }

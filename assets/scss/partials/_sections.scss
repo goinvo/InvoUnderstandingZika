@@ -14,7 +14,7 @@
 		}
 	}
 }
-#prevent {
+#overview-prevent {
 	ul {
 		list-style: none;
 		margin: 0;
@@ -26,9 +26,14 @@
 			display: inline-block;
 		}
 		.image {
-			height: 4.5rem;
+			height: 6.5rem;
 			width: 6.5rem;
 			margin-right: 2rem;
+			img {
+				height: 6.5rem;
+				width: 6.5rem;
+				object-fit: contain;
+			}
 		}
 		.description {
 			vertical-align: top;
@@ -123,16 +128,21 @@
 	#now {
 		margin-top: -5rem;
 		background: $app-pink;
-		padding: 0 5rem 5rem 5rem;
-		h2 span {
-			background: rgba(42,42,42,.7);
-			padding-left: 2rem;
-			padding-right: 2rem;
+		h2 {
+			background: $app-dark-pink;
+			padding: 3.5rem 5rem 2rem 5rem;
 			sup a:hover {
 				color: #fff;
 			}
+			.no-caps {
+				text-transform: none;
+				font-family: $font-family;
+				font-size: 2.4rem;
+			}
 		}
-		
+		.row {
+			padding: 0 5rem 5rem 5rem;
+		}
 		#americas, #pacific, #africa { 
 			display: inline-block; 
 			vertical-align: top;
@@ -267,9 +277,18 @@
 .column#prevention {
 	width: 78%;
 	padding-right: 0;
+	.mosquito {
+		background: url("../images/mosquito.png") no-repeat;
+		display: block;
+		z-index: 1;
+		&#mosquito-1 {}
+		&#mosquito-2 {}
+		&#mosquito-3 {}
+	}
 	.column {
 		border: none;
-		padding: 0 5rem 3rem 0;
+		padding: 1.5rem 5rem 1.5rem 0;
+		
 		.image {
 			height: 9rem;
 			margin-bottom: 2rem;
