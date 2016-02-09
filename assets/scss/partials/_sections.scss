@@ -81,13 +81,50 @@
 	.column {
 		border-left: none;
 	}
+	.warning {
+		margin-bottom: 3rem;
+	}
+	.para {
+		img, p {
+			display: inline-block;
+		}
+		img {
+			width: 40%;
+			padding-right: 2rem;
+			vertical-align: top;
+			&#incubation {
+				padding-top: 5rem;
+			}
+		}
+		p {
+			width: 55%;
+		}
+	}
 	.signs-image {
 		@include gradient-right;
+		//margin-bottom: -7rem;
 	}
 	@media (max-width: $tablet) {
 		.column.signs-image {
 			border-top: none;
 			background: transparent;
+		}
+		.para {
+			img, p {
+				display: block;
+			}
+			img {
+				width: 100%;
+				max-width: 23rem;
+				margin: 0 auto;
+				padding-bottom: 2rem;
+				&#incubation {
+					padding-top: 0;
+				}
+			}
+			p {
+				width: 100%;
+			}
 		}
 	}
 }
@@ -95,8 +132,21 @@
 	.column {
 		border-left: none;
 	}
+	.warning {
+		margin-bottom: 3rem;
+		padding-top: 3rem;
+	}
 	.microceph-image {
 		@include gradient-left;
+		
+	}
+	.graph {
+		h3 {
+			width: 80%;
+		}
+		img {
+			margin-top: -9rem;
+		}
 	}
 	@media (max-width: $tablet) {
 		.column { border: none;}
@@ -115,6 +165,7 @@
 		margin: 0;
 	}
 	#traveled {
+		border-top: $border-base;
 		h2 {
 			z-index: 5;
 			//color: #323232;
@@ -277,6 +328,9 @@
 .column#prevention {
 	width: 78%;
 	padding-right: 0;
+	#vaccinations {
+		padding-right: 5rem;
+	}
 	.mosquito {
 		background: url("../images/mosquito.png") no-repeat;
 		display: block;
@@ -284,6 +338,9 @@
 		&#mosquito-1 {}
 		&#mosquito-2 {}
 		&#mosquito-3 {}
+	}
+	.row {
+		padding-right: 0;
 	}
 	.column {
 		border: none;
@@ -308,6 +365,12 @@
 	padding-right: 0;
 	width: 22%;
 	height: 100%;
+	a { 
+		word-break: break-all;
+		&:hover {
+			color: $app-grey;
+		}
+	}
 	@media (max-width: $tablet) {
 		display: block;
 		width: 100%;
@@ -319,6 +382,7 @@
 			font-weight: 700;
 			text-transform: none;
 			line-height: $font-size-base + 1rem;
+			word-break: break-all;
 		}
 	}
 	h3, p {padding-right: 5rem;}
@@ -404,6 +468,44 @@
 	}
 }
 
+#flavivirus {
+	.column {
+		.column {
+			border: none;
+			padding-left: 0;
+		}
+	}
+	h3 {
+			font-weight: 700;
+	}
+	#flavivirus-zika {
+		h3 {
+			color: $app-pink;
+		}
+	}
+	#flavivirus-yellow {
+		h3 {
+			color: #fcee6d;
+		}
+	}
+	#flavivirus-dengue {
+		h3 {
+			color: #27aae1;
+		}
+	}
+	.graph {
+		h3 {
+			padding-left: 9rem;
+		}
+	}
+}
+
+#dont-know {
+	.columns {
+		padding-left: 0;
+	}
+}
+
 #action-plan {
 	border-top: $border-base;
 	h2 {
@@ -414,6 +516,9 @@
 		@media (max-width: $tablet) {
 			display: block;
 			width: 90%;
+			.image {
+				margin: 0 auto;
+			}
 		}
 	}
 }

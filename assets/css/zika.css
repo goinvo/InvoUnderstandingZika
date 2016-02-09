@@ -42,13 +42,14 @@ body {
   font-size: 1.8rem;
   line-height: 2.8rem;
   color: #fff;
-  font-weight: 300; }
+  font-weight: 300;
+  word-break: normal; }
 
 a {
   color: #fff;
   word-break: break-all; }
   a:hover {
-    color: #323232; }
+    color: #8f2741; }
 
 sup a {
   text-decoration: none; }
@@ -363,7 +364,8 @@ nav {
     line-height: 2.8rem; }
   .article .column {
     border-left: #333334 solid 1px;
-    border-top: #333334 solid 1px; }
+    border-top: #333334 solid 1px;
+    padding-top: 4rem; }
 
 .footer span {
   font-size: 1.4rem;
@@ -446,6 +448,22 @@ nav {
 .row#zika-symptoms .column {
   border-left: none; }
 
+.row#zika-symptoms .warning {
+  margin-bottom: 3rem; }
+
+.row#zika-symptoms .para img, .row#zika-symptoms .para p {
+  display: inline-block; }
+
+.row#zika-symptoms .para img {
+  width: 40%;
+  padding-right: 2rem;
+  vertical-align: top; }
+  .row#zika-symptoms .para img#incubation {
+    padding-top: 5rem; }
+
+.row#zika-symptoms .para p {
+  width: 55%; }
+
 .row#zika-symptoms .signs-image {
   background: -moz-linear-gradient(left, #1a1a1b 0%, #313131 100%);
   /* FF3.6-15 */
@@ -457,10 +475,25 @@ nav {
 @media (max-width: 767px) {
   .row#zika-symptoms .column.signs-image {
     border-top: none;
-    background: transparent; } }
+    background: transparent; }
+  .row#zika-symptoms .para img, .row#zika-symptoms .para p {
+    display: block; }
+  .row#zika-symptoms .para img {
+    width: 100%;
+    max-width: 23rem;
+    margin: 0 auto;
+    padding-bottom: 2rem; }
+    .row#zika-symptoms .para img#incubation {
+      padding-top: 0; }
+  .row#zika-symptoms .para p {
+    width: 100%; } }
 
 .row#symptoms-microcephaly .column {
   border-left: none; }
+
+.row#symptoms-microcephaly .warning {
+  margin-bottom: 3rem;
+  padding-top: 3rem; }
 
 .row#symptoms-microcephaly .microceph-image {
   background: -moz-linear-gradient(left, #313131 0%, #1a1a1b 100%);
@@ -469,6 +502,12 @@ nav {
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right, #313131 0%, #1a1a1b 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
+
+.row#symptoms-microcephaly .graph h3 {
+  width: 80%; }
+
+.row#symptoms-microcephaly .graph img {
+  margin-top: -9rem; }
 
 @media (max-width: 767px) {
   .row#symptoms-microcephaly .column {
@@ -484,12 +523,13 @@ nav {
   padding: 0;
   margin: 0; }
 
-.row#where-is-zika #traveled h2 {
-  z-index: 5; }
-
-.row#where-is-zika #traveled img {
-  z-index: 1;
-  width: 100%; }
+.row#where-is-zika #traveled {
+  border-top: #333334 solid 1px; }
+  .row#where-is-zika #traveled h2 {
+    z-index: 5; }
+  .row#where-is-zika #traveled img {
+    z-index: 1;
+    width: 100%; }
 
 .row#where-is-zika #now {
   margin-top: -5rem;
@@ -614,10 +654,14 @@ nav {
 .column#prevention {
   width: 78%;
   padding-right: 0; }
+  .column#prevention #vaccinations {
+    padding-right: 5rem; }
   .column#prevention .mosquito {
     background: url("../images/mosquito.png") no-repeat;
     display: block;
     z-index: 1; }
+  .column#prevention .row {
+    padding-right: 0; }
   .column#prevention .column {
     border: none;
     padding: 1.5rem 5rem 1.5rem 0; }
@@ -636,6 +680,10 @@ nav {
   padding-right: 0;
   width: 22%;
   height: 100%; }
+  .column#right-spray a {
+    word-break: break-all; }
+    .column#right-spray a:hover {
+      color: #1a1a1b; }
   @media (max-width: 767px) {
     .column#right-spray {
       display: block;
@@ -646,7 +694,8 @@ nav {
       font-family: "Open Sans", Helvetica, Arial, sans-serif;
       font-weight: 700;
       text-transform: none;
-      line-height: 2.8rem; }
+      line-height: 2.8rem;
+      word-break: break-all; }
   .column#right-spray h3, .column#right-spray p {
     padding-right: 5rem; }
   .column#right-spray ul {
@@ -709,6 +758,28 @@ nav {
   bottom: 0;
   padding-left: 2rem; }
 
+#flavivirus .column .column {
+  border: none;
+  padding-left: 0; }
+
+#flavivirus h3 {
+  font-weight: 700; }
+
+#flavivirus #flavivirus-zika h3 {
+  color: #8f2741; }
+
+#flavivirus #flavivirus-yellow h3 {
+  color: #fcee6d; }
+
+#flavivirus #flavivirus-dengue h3 {
+  color: #27aae1; }
+
+#flavivirus .graph h3 {
+  padding-left: 9rem; }
+
+#dont-know .columns {
+  padding-left: 0; }
+
 #action-plan {
   border-top: #333334 solid 1px; }
   #action-plan h2 {
@@ -718,7 +789,9 @@ nav {
     @media (max-width: 767px) {
       #action-plan .columns.three {
         display: block;
-        width: 90%; } }
+        width: 90%; }
+        #action-plan .columns.three .image {
+          margin: 0 auto; } }
 
 #references ol {
   margin: 0;

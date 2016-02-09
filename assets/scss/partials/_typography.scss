@@ -19,6 +19,7 @@ body {
 	line-height: $line-height-base;
 	color: $font-color-base;
 	font-weight: 300;
+	word-break: normal;
 }
 
 a {
@@ -26,7 +27,7 @@ a {
 	word-break: break-all;
 
 	&:hover {
-		color: #323232;
+		color: $app-pink;
 	}
 }
 sup {
