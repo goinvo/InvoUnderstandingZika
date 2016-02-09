@@ -362,7 +362,7 @@ nav {
 
 .article {
   z-index: 1;
-  background: #1a1a1b; }
+  background: #232323; }
   .article h2 {
     text-transform: uppercase; }
   .article p {
@@ -420,11 +420,11 @@ nav {
 
 .column#signs {
   padding-right: 0;
-  background: -moz-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  background: -moz-linear-gradient(left, #232323 0%, #313131 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  background: -webkit-linear-gradient(left, #232323 0%, #313131 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #1a1a1b 0%, #313131 100%);
+  background: linear-gradient(to right, #232323 0%, #313131 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   .column#signs .text {
     width: 30%;
@@ -471,11 +471,11 @@ nav {
   width: 55%; }
 
 .row#zika-symptoms .signs-image {
-  background: -moz-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  background: -moz-linear-gradient(left, #232323 0%, #313131 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #1a1a1b 0%, #313131 100%);
+  background: -webkit-linear-gradient(left, #232323 0%, #313131 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #1a1a1b 0%, #313131 100%);
+  background: linear-gradient(to right, #232323 0%, #313131 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
 @media (max-width: 960px) {
@@ -502,11 +502,11 @@ nav {
   padding-top: 3rem; }
 
 .row#symptoms-microcephaly .microceph-image {
-  background: -moz-linear-gradient(left, #313131 0%, #1a1a1b 100%);
+  background: -moz-linear-gradient(left, #313131 0%, #232323 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #313131 0%, #1a1a1b 100%);
+  background: -webkit-linear-gradient(left, #313131 0%, #232323 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #313131 0%, #1a1a1b 100%);
+  background: linear-gradient(to right, #313131 0%, #232323 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
 .row#symptoms-microcephaly .graph h3 {
@@ -706,7 +706,7 @@ nav {
   .column#right-spray a {
     word-break: break-all; }
     .column#right-spray a:hover {
-      color: #1a1a1b; }
+      color: #232323; }
   @media (max-width: 960px) {
     .column#right-spray {
       display: block;
@@ -785,10 +785,12 @@ nav {
 
 #flavivirus .column .column {
   border: none;
-  padding-left: 0; }
+  padding-left: 0;
+  padding-top: 0; }
 
 #flavivirus h3 {
-  font-weight: 700; }
+  font-weight: 700;
+  margin: 0; }
 
 #flavivirus #flavivirus-zika h3 {
   color: #8f2741; }
@@ -799,11 +801,12 @@ nav {
 #flavivirus #flavivirus-dengue h3 {
   color: #27aae1; }
 
-#flavivirus .graph h3 {
-  padding-left: 9rem; }
+#flavivirus .graph {
+  padding-right: 0;
+  margin-top: 0.4rem; }
 
-#flavivirus .graph img {
-  margin-top: -8rem; }
+#dont-know .column {
+  padding-right: 0; }
 
 #dont-know .columns {
   padding-left: 0; }

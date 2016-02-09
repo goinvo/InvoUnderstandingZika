@@ -498,10 +498,12 @@
 		.column {
 			border: none;
 			padding-left: 0;
+			padding-top: 0;
 		}
 	}
 	h3 {
 			font-weight: 700;
+			margin: 0;
 	}
 	#flavivirus-zika {
 		h3 {
@@ -519,16 +521,15 @@
 		}
 	}
 	.graph {
-		h3 {
-			padding-left: 9rem;
-		}
-		img {
-			margin-top: -8rem;
-		}
+		padding-right: 0;
+		margin-top: 0.4rem;
 	}
 }
 
 #dont-know {
+	.column {
+		padding-right: 0;
+	}
 	.columns {
 		padding-left: 0;
 	}
