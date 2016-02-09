@@ -99,7 +99,7 @@ strong {
   font-weight: 700; }
 
 .secondary {
-  color: #979ba8; }
+  color: #646060; }
 
 .warning {
   color: #b53856;
@@ -112,12 +112,11 @@ strong {
 body {
   margin: 0;
   padding: 0;
-  background: #5d5d5d; }
+  background: #232323; }
 
 .container {
   position: relative;
-  width: 90%;
-  max-width: 1500px;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box; }
@@ -224,8 +223,7 @@ img.scale-with-grid {
 nav {
   position: fixed;
   top: 0;
-  width: 90%;
-  max-width: 1500px;
+  width: 100%;
   z-index: 15;
   opacity: 0;
   transition: opacity .5s; }
@@ -377,7 +375,10 @@ nav {
   font-size: 1.4rem;
   margin: 3.5rem;
   margin-left: 5rem;
-  display: block; }
+  display: block;
+  color: #646060; }
+  .footer span a {
+    color: #646060; }
 
 /* Larger than mobile */
 /* Larger than tablet */
@@ -803,7 +804,8 @@ nav {
 
 #flavivirus .graph {
   padding-right: 0;
-  margin-top: 0.4rem; }
+  margin-top: 0.4rem;
+  max-width: 54.5rem; }
 
 #dont-know .column {
   padding-right: 0; }
@@ -836,7 +838,10 @@ nav {
 
 #references ol {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: #646060; }
+  #references ol .li-color {
+    color: #fff; }
 
 #references a {
   word-break: normal; }

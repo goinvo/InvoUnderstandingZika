@@ -6,8 +6,8 @@ body {
 }
 .container {
 	position: relative;
-	width: 90%;
-	max-width: 1500px;
+	width: 100%;
+	//max-width: 1500px;
 	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
@@ -111,8 +111,8 @@ img.scale-with-grid {
 nav{
 	position: fixed;
 	top: 0;
-	width: 90%;
-	max-width: 1500px;
+	width: 100%;
+	//max-width: 1500px;
 	z-index: 15;
 	opacity: 0;
 	transition: opacity .5s;
@@ -298,6 +298,10 @@ nav{
 		margin: 3.5rem; 
 		margin-left: 5rem;
 		display: block;
+		color: $font-color-secondary;
+		a {
+			color: $font-color-secondary;
+		}
 	}
 }
 

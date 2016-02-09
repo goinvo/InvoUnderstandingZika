@@ -523,6 +523,7 @@
 	.graph {
 		padding-right: 0;
 		margin-top: 0.4rem;
+		max-width: 54.5rem;
 	}
 }
 
@@ -567,7 +568,11 @@
 #references {
 	ol {
 		margin: 0;
-		padding: 0;
+		padding: 0;		
+		color: $font-color-secondary;
+		.li-color {
+			color: #fff;
+		}
 	}
 	a {
 		word-break: normal;
