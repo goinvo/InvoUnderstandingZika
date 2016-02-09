@@ -11,7 +11,11 @@ body {
 	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
+	@media (max-width: 760px) {
+		width: 100%;	
+	}
 }
+
 
 .column, .columns {
 	width: 100%;
@@ -112,6 +116,9 @@ nav{
 	z-index: 15;
 	opacity: 0;
 	transition: opacity .5s;
+	@media (max-width: 760px) {
+		width: 100%;	
+	}
 	&.scrolled {
 		opacity: 1;
 		transition: opacity .5s;

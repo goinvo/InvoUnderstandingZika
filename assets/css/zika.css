@@ -121,6 +121,9 @@ body {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box; }
+  @media (max-width: 760px) {
+    .container {
+      width: 100%; } }
 
 .column, .columns {
   width: 100%;
@@ -171,7 +174,7 @@ body {
   .one-half.column {
     width: 50%; } }
 
-@media (max-width: 767px) {
+@media (max-width: 960px) {
   .column, .columns {
     float: none;
     width: 100%; }
@@ -226,6 +229,9 @@ nav {
   z-index: 15;
   opacity: 0;
   transition: opacity .5s; }
+  @media (max-width: 760px) {
+    nav {
+      width: 100%; } }
   nav.scrolled {
     opacity: 1;
     transition: opacity .5s; }
@@ -239,7 +245,7 @@ nav {
     color: #fff;
     font-size: 1.8rem;
     position: relative; }
-    @media (max-width: 767px) {
+    @media (max-width: 960px) {
       nav .menu {
         z-index: 6; } }
     nav .menu ul {
@@ -251,7 +257,7 @@ nav {
         nav .menu ul {
           height: 100%;
           min-width: 15.0rem; } }
-      @media (max-width: 767px) {
+      @media (max-width: 960px) {
         nav .menu ul.opened li {
           display: block; } }
       nav .menu ul li {
@@ -270,14 +276,14 @@ nav {
           line-height: 2.2rem; }
           nav .menu ul li#expand:hover {
             background: #5b0d1d; }
-          @media (max-width: 767px) {
+          @media (max-width: 960px) {
             nav .menu ul li#expand {
               display: inline-block; } }
         @media (max-width: 480px) {
           nav .menu ul li {
             display: block;
             background: #7e1329; } }
-        @media (max-width: 767px) {
+        @media (max-width: 960px) {
           nav .menu ul li {
             display: none;
             padding-left: 5rem;
@@ -408,7 +414,7 @@ nav {
     vertical-align: top;
     width: 75%;
     margin-top: -0.4rem; }
-    @media (max-width: 767px) {
+    @media (max-width: 960px) {
       #overview-prevent ul .description {
         width: 90%; } }
 
@@ -428,7 +434,7 @@ nav {
     width: 60%;
     height: 100px;
     z-index: 4; }
-    @media (max-width: 767px) {
+    @media (max-width: 960px) {
       .column#signs .signs-image {
         min-height: 42rem; } }
     @media (max-width: 575px) {
@@ -440,7 +446,7 @@ nav {
   .column#signs .text, .column#signs .signs-image {
     display: inline-block;
     vertical-align: top; }
-    @media (max-width: 767px) {
+    @media (max-width: 960px) {
       .column#signs .text, .column#signs .signs-image {
         display: block;
         width: 90%; } }
@@ -472,7 +478,7 @@ nav {
   background: linear-gradient(to right, #1a1a1b 0%, #313131 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
 
-@media (max-width: 767px) {
+@media (max-width: 960px) {
   .row#zika-symptoms .column.signs-image {
     border-top: none;
     background: transparent; }
@@ -509,58 +515,57 @@ nav {
 .row#symptoms-microcephaly .graph img {
   margin-top: -9rem; }
 
-@media (max-width: 767px) {
+@media (max-width: 960px) {
   .row#symptoms-microcephaly .column {
     border: none; }
   .row#symptoms-microcephaly .column.microceph-image {
     border-top: #333334 solid 1px;
     background: transparent; } }
 
-.row#where-is-zika h2 {
-  text-align: center; }
-
-.row#where-is-zika #traveled, .row#where-is-zika #now {
-  padding: 0;
-  margin: 0; }
-
-.row#where-is-zika #traveled {
-  border-top: #333334 solid 1px; }
-  .row#where-is-zika #traveled h2 {
-    z-index: 5; }
-  .row#where-is-zika #traveled img {
-    z-index: 1;
-    width: 100%; }
-
-.row#where-is-zika #now {
-  margin-top: -5rem;
-  background: #8f2741; }
-  .row#where-is-zika #now h2 {
-    background: #7c1f3a;
-    padding: 3.5rem 5rem 2rem 5rem; }
-    .row#where-is-zika #now h2 sup a:hover {
-      color: #fff; }
-    .row#where-is-zika #now h2 .no-caps {
-      text-transform: none;
-      font-family: "Open Sans", Helvetica, Arial, sans-serif;
-      font-size: 2.4rem; }
-  .row#where-is-zika #now .row {
-    padding: 0 5rem 5rem 5rem; }
-  .row#where-is-zika #now #americas, .row#where-is-zika #now #pacific, .row#where-is-zika #now #africa {
-    display: inline-block;
-    vertical-align: top;
+.row#where-is-zika {
+  padding-top: 4rem; }
+  .row#where-is-zika h2 {
+    text-align: center; }
+  .row#where-is-zika #traveled, .row#where-is-zika #now {
     padding: 0;
-    margin-right: 3rem;
-    margin-top: 3rem; }
-    .row#where-is-zika #now #americas h3, .row#where-is-zika #now #pacific h3, .row#where-is-zika #now #africa h3 {
+    margin: 0; }
+  .row#where-is-zika #traveled {
+    border-top: #333334 solid 1px; }
+    .row#where-is-zika #traveled h2 {
+      z-index: 5; }
+    .row#where-is-zika #traveled img {
+      z-index: 1;
+      width: 100%; }
+  .row#where-is-zika #now {
+    margin-top: -5rem;
+    background: #8f2741; }
+    .row#where-is-zika #now h2 {
+      background: #7c1f3a;
+      padding: 3.5rem 5rem 2rem 5rem; }
+      .row#where-is-zika #now h2 sup a:hover {
+        color: #fff; }
+      .row#where-is-zika #now h2 .no-caps {
+        text-transform: none;
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+        font-size: 2.4rem; }
+    .row#where-is-zika #now .row {
+      padding: 0 5rem 5rem 5rem; }
+    .row#where-is-zika #now #americas, .row#where-is-zika #now #pacific, .row#where-is-zika #now #africa {
+      display: inline-block;
+      vertical-align: top;
+      padding: 0;
+      margin-right: 3rem;
+      margin-top: 3rem; }
+      .row#where-is-zika #now #americas h3, .row#where-is-zika #now #pacific h3, .row#where-is-zika #now #africa h3 {
+        margin: 0;
+        padding: 0;
+        border-bottom: solid 1px #fff; }
+    .row#where-is-zika #now ul {
+      vertical-align: top;
+      list-style: none;
       margin: 0;
       padding: 0;
-      border-bottom: solid 1px #fff; }
-  .row#where-is-zika #now ul {
-    vertical-align: top;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline-block; }
+      display: inline-block; }
 
 .row#timeline {
   overflow: hidden;
@@ -653,13 +658,31 @@ nav {
 
 .column#prevention {
   width: 78%;
-  padding-right: 0; }
+  padding-right: 0;
+  position: relative; }
   .column#prevention #vaccinations {
     padding-right: 5rem; }
   .column#prevention .mosquito {
-    background: url("../images/mosquito.png") no-repeat;
+    background: url("../images/mosquito.svg") no-repeat;
     display: block;
-    z-index: 1; }
+    z-index: 1;
+    background-size: contain;
+    position: absolute; }
+    .column#prevention .mosquito#mosquito-1 {
+      height: 20rem;
+      width: 18.6rem;
+      left: 50%;
+      top: 15%; }
+    .column#prevention .mosquito#mosquito-2 {
+      height: 35rem;
+      width: 32.5rem;
+      top: 40%;
+      left: 20%; }
+    .column#prevention .mosquito#mosquito-3 {
+      height: 40rem;
+      width: 37.1rem;
+      bottom: 20%;
+      right: 10%; }
   .column#prevention .row {
     padding-right: 0; }
   .column#prevention .column {
@@ -671,7 +694,7 @@ nav {
       .column#prevention .column .image img {
         display: block;
         margin: 0 auto; }
-  @media (max-width: 767px) {
+  @media (max-width: 960px) {
     .column#prevention {
       width: 100%; } }
 
@@ -684,7 +707,7 @@ nav {
     word-break: break-all; }
     .column#right-spray a:hover {
       color: #1a1a1b; }
-  @media (max-width: 767px) {
+  @media (max-width: 960px) {
     .column#right-spray {
       display: block;
       width: 100%; } }
@@ -706,6 +729,12 @@ nav {
       width: 28%;
       padding: 0 2rem 2rem 0;
       display: inline-block; }
+      @media (max-width: 960px) {
+        .column#right-spray ul li {
+          width: 15%; } }
+      @media (max-width: 487px) {
+        .column#right-spray ul li {
+          width: 28%; } }
 
 .column#transmission .columns {
   padding-left: 0; }
@@ -713,7 +742,7 @@ nav {
     padding-right: 0; }
   .column#transmission .columns.three {
     width: 25%; }
-    @media (max-width: 767px) {
+    @media (max-width: 960px) {
       .column#transmission .columns.three {
         display: block;
         padding-right: 0;
@@ -722,41 +751,37 @@ nav {
     display: block;
     margin: 0 auto; }
 
-#treatments .column {
-  padding: 0;
-  margin: 0;
-  border: none; }
-
-#treatments .treatment-header {
-  background: #8f2741;
-  position: relative; }
-  #treatments .treatment-header h2 {
-    padding-left: 5rem; }
-  #treatments .treatment-header h2, #treatments .treatment-header .treatment-image {
-    display: inline-block; }
-
-#treatments ul {
-  margin-left: 0;
-  padding-left: 0;
-  list-style: circle; }
-
-#treatments .treatment-plan {
-  border-left: #333334 solid 1px;
-  padding: 5rem; }
-
-#treatments #treatment-adults .treatment-image img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  padding-right: 2rem; }
-
-#treatments #treatment-pregnant h2 {
-  margin-left: 5rem; }
-
-#treatments #treatment-pregnant .treatment-image img {
-  position: absolute;
-  bottom: 0;
-  padding-left: 2rem; }
+#treatments {
+  padding-top: 6rem; }
+  #treatments .column {
+    padding: 0;
+    margin: 0;
+    border: none; }
+  #treatments .treatment-header {
+    background: #8f2741;
+    position: relative; }
+    #treatments .treatment-header h2 {
+      padding-left: 5rem; }
+    #treatments .treatment-header h2, #treatments .treatment-header .treatment-image {
+      display: inline-block; }
+  #treatments ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style: circle; }
+  #treatments .treatment-plan {
+    border-left: #333334 solid 1px;
+    padding: 5rem; }
+  #treatments #treatment-adults .treatment-image img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 2rem; }
+  #treatments #treatment-pregnant h2 {
+    margin-left: 5rem; }
+  #treatments #treatment-pregnant .treatment-image img {
+    position: absolute;
+    bottom: 0;
+    padding-left: 2rem; }
 
 #flavivirus .column .column {
   border: none;
@@ -777,21 +802,34 @@ nav {
 #flavivirus .graph h3 {
   padding-left: 9rem; }
 
+#flavivirus .graph img {
+  margin-top: -8rem; }
+
 #dont-know .columns {
   padding-left: 0; }
 
+@media (max-width: 960px) {
+  #dont-know img {
+    margin-left: 35%; } }
+
+@media (max-width: 487px) {
+  #dont-know img {
+    margin-left: auto;
+    margin-right: auto; } }
+
 #action-plan {
   border-top: #333334 solid 1px; }
-  #action-plan h2 {
-    padding-left: 5rem; }
   #action-plan .columns.three {
+    padding-left: 0;
     width: 25%; }
-    @media (max-width: 767px) {
+    @media (max-width: 960px) {
       #action-plan .columns.three {
         display: block;
-        width: 90%; }
-        #action-plan .columns.three .image {
-          margin: 0 auto; } }
+        width: 90%;
+        padding-right: 0; }
+        #action-plan .columns.three .image img {
+          padding-bottom: 2rem;
+          margin-left: 35%; } }
 
 #references ol {
   margin: 0;

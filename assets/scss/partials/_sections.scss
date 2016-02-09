@@ -157,6 +157,7 @@
 	}
 }
 .row#where-is-zika {
+	padding-top: 4rem;
 	h2 {
 		text-align: center;
 	}
@@ -328,16 +329,34 @@
 .column#prevention {
 	width: 78%;
 	padding-right: 0;
+	position: relative;
 	#vaccinations {
 		padding-right: 5rem;
 	}
 	.mosquito {
-		background: url("../images/mosquito.png") no-repeat;
+		background: url("../images/mosquito.svg") no-repeat;
 		display: block;
 		z-index: 1;
-		&#mosquito-1 {}
-		&#mosquito-2 {}
-		&#mosquito-3 {}
+		background-size: contain;
+		position: absolute;
+		&#mosquito-1 {
+			height: 20rem;
+			width:18.6rem;
+			left: 50%;
+			top: 15%;
+		}
+		&#mosquito-2 {
+			height: 35rem;
+			width: 32.5rem;
+			top: 40%;
+			left: 20%;
+		}
+		&#mosquito-3 { 
+			height: 40rem;
+			width: 37.1rem;
+			bottom: 20%;
+			right: 10%;
+		}
 	}
 	.row {
 		padding-right: 0;
@@ -394,7 +413,12 @@
 			width: 28%;
 			padding: 0 2rem 2rem 0;
 			display: inline-block;
-			
+			@media (max-width: $tablet) {
+				width: 15%;
+			}
+			@media (max-width: $phone) {
+				width: 28%;
+			}
 		}
 	}
 }
@@ -421,6 +445,7 @@
 }
 
 #treatments {
+	padding-top: 6rem;
 	.column {
 		padding: 0;
 		margin: 0;
@@ -497,6 +522,9 @@
 		h3 {
 			padding-left: 9rem;
 		}
+		img {
+			margin-top: -8rem;
+		}
 	}
 }
 
@@ -504,20 +532,32 @@
 	.columns {
 		padding-left: 0;
 	}
+	@media (max-width: $tablet) {
+		img {
+			margin-left: 35%;
+		}
+	}
+	@media (max-width: $phone) {
+		img {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	
 }
 
 #action-plan {
 	border-top: $border-base;
-	h2 {
-		padding-left: 5rem;
-	}
 	.columns.three {
+		padding-left: 0;
 		width: 25%;
 		@media (max-width: $tablet) {
 			display: block;
 			width: 90%;
-			.image {
-				margin: 0 auto;
+			padding-right: 0;
+			.image img {
+				padding-bottom: 2rem;
+				margin-left: 35%;
 			}
 		}
 	}
