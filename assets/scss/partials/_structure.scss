@@ -7,13 +7,9 @@ body {
 .container {
 	position: relative;
 	width: 100%;
-	//max-width: 1500px;
 	margin: 0 auto;
 	padding: 0;
 	box-sizing: border-box;
-	@media (max-width: 760px) {
-		width: 100%;	
-	}
 }
 
 
@@ -112,13 +108,9 @@ nav{
 	position: fixed;
 	top: 0;
 	width: 100%;
-	//max-width: 1500px;
 	z-index: 15;
 	opacity: 0;
 	transition: opacity .5s;
-	@media (max-width: 760px) {
-		width: 100%;	
-	}
 	&.scrolled {
 		opacity: 1;
 		transition: opacity .5s;
@@ -133,7 +125,10 @@ nav{
 		font-size: $font-size-base;
 		position: relative;
 
-		@media (max-width: $tablet) {
+		@media (max-width: 1240px) {
+ 			font-size: $font-size-small;
+ 		}
+ 		@media (max-width: $tablet) {
  			z-index: 6;
  		}
 		ul {
@@ -159,7 +154,10 @@ nav{
 				padding: 2.1rem 1.5rem 2.1rem 1.5rem; 
 				line-height: 2.2rem; 
 				box-sizing: border-box;
-
+				@media (max-width: 1240px) {
+		 			padding-left: 1rem;
+		 			padding-right: 1rem; 
+		 		}
 				&#page-title, &#expand {
 					display: inline-block;
 				}
@@ -169,7 +167,6 @@ nav{
 				}
 				&#expand {
 					display: none;
-					//font-size: 3.6rem;
 					&:hover { background: $main-nav-selected; }
 					line-height: 2.2rem; 
 
