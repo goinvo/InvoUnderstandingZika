@@ -572,38 +572,8 @@ nav {
   overflow: hidden;
   position: relative;
   border-top: #333334 solid 1px; }
-  .row#timeline .slider-header {
-    margin-bottom: 5rem; }
   .row#timeline h2 {
     text-align: center; }
-  .row#timeline .timeline-arrow {
-    display: inline-block;
-    border-radius: 3rem;
-    height: 6rem;
-    width: 6rem;
-    margin-top: -1rem; }
-    .row#timeline .timeline-arrow.next {
-      right: 5rem;
-      position: absolute; }
-    .row#timeline .timeline-arrow.prev {
-      left: 5rem;
-      position: absolute; }
-    .row#timeline .timeline-arrow .arrow {
-      height: 3rem;
-      width: 1.5rem;
-      display: inline-block; }
-    .row#timeline .timeline-arrow.next .arrow {
-      background: url("../images/slider-arrow.png") no-repeat;
-      background-position: 20% 50%;
-      padding: 1.5rem;
-      transform: rotate(180deg); }
-    .row#timeline .timeline-arrow.prev .arrow {
-      background: url("../images/slider-arrow.png") no-repeat;
-      background-position: 65% 50%;
-      padding: 1.5rem; }
-    .row#timeline .timeline-arrow:hover {
-      background: #8f2741;
-      cursor: pointer; }
   .row#timeline ul {
     list-style: none;
     padding: 0;
@@ -612,6 +582,7 @@ nav {
     .row#timeline ul li {
       display: inline-block;
       width: 26.7rem;
+      margin-bottom: 5rem;
       vertical-align: top;
       margin-left: 5rem; }
       .row#timeline ul li span.year {
@@ -623,10 +594,7 @@ nav {
         background: #8f2741;
         z-index: 4;
         display: table;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 2rem;
-        margin-bottom: 2rem; }
+        margin: 2rem auto 2rem auto; }
       .row#timeline ul li .timeline-image {
         height: 18rem;
         width: 28rem;
@@ -635,21 +603,6 @@ nav {
           height: 18rem;
           width: 28rem;
           object-fit: cover; }
-  .row#timeline .slider {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 100px; }
-    .row#timeline .slider ul {
-      list-style: outside none;
-      padding: 0;
-      margin: 0;
-      width: 10000%;
-      position: relative;
-      top: 0;
-      right: 0;
-      transition: all 0.6s ease; }
-      .row#timeline .slider ul li {
-        float: left; }
   .row#timeline .line {
     height: 1.2rem;
     width: 100%;
